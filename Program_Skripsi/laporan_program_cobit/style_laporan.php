@@ -1,0 +1,22 @@
+﻿<style>
+			body {
+				padding: 20px;
+			}
+			.table {
+				border: 1px solid black;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			.table-th {
+			    border: 1px solid black;
+			    border-collapse: collapse;
+			    background-color: red;
+			    padding: 5px 7px;
+			    color: white;
+			}
+			.table-td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 5px 7px;
+			}
+		</style>
