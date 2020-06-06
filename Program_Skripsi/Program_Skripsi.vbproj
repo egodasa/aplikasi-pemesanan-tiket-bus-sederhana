@@ -96,34 +96,22 @@
     <Compile Include="Form\Cetak_Laporan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Domain.Designer.vb">
-      <DependentUpon>Domain.vb</DependentUpon>
+    <Compile Include="Form\Pemesanan.Designer.vb">
+      <DependentUpon>Pemesanan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Domain.vb">
+    <Compile Include="Form\Pemesanan.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Kuisioner.Designer.vb">
-      <DependentUpon>Kuisioner.vb</DependentUpon>
+    <Compile Include="Form\Tiket.Designer.vb">
+      <DependentUpon>Tiket.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Kuisioner.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\Pernyataan.Designer.vb">
-      <DependentUpon>Pernyataan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Pernyataan.vb">
+    <Compile Include="Form\Tiket.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\User.Designer.vb">
       <DependentUpon>User.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\User.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\IsiKuisioner.Designer.vb">
-      <DependentUpon>IsiKuisioner.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\IsiKuisioner.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Login.Designer.vb">
@@ -136,6 +124,12 @@
       <DependentUpon>Menu_Utama.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\Menu_Utama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Mobil.Designer.vb">
+      <DependentUpon>Mobil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Mobil.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -158,26 +152,23 @@
     <EmbeddedResource Include="Form\Cetak_Laporan.resx">
       <DependentUpon>Cetak_Laporan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Domain.resx">
-      <DependentUpon>Domain.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Pemesanan.resx">
+      <DependentUpon>Pemesanan.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Kuisioner.resx">
-      <DependentUpon>Kuisioner.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Pernyataan.resx">
-      <DependentUpon>Pernyataan.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Tiket.resx">
+      <DependentUpon>Tiket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\User.resx">
       <DependentUpon>User.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\IsiKuisioner.resx">
-      <DependentUpon>IsiKuisioner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Menu_Utama.resx">
       <DependentUpon>Menu_Utama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Mobil.resx">
+      <DependentUpon>Mobil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -187,6 +178,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="keluar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="laporan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="laporan_program_cobit\header_laporan.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -200,6 +200,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="laporan_program_cobit\style_laporan.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pemesanan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tiket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="user.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="My Project\Application.myapp">
