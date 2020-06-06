@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub DomainMenu(sender As Object, e As EventArgs)
-        Domain.Show()
+        Bus.Show()
         Me.Hide()
     End Sub
 

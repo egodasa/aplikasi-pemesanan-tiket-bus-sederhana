@@ -56,7 +56,7 @@ Partial Class Menu_Utama
         Me.Bbus.Name = "Bbus"
         Me.Bbus.Size = New System.Drawing.Size(254, 58)
         Me.Bbus.TabIndex = 20
-        Me.Bbus.Text = "Data Bus"
+        Me.Bbus.Text = "Data Mobil"
         Me.Bbus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Bbus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Bbus.UseVisualStyleBackColor = False
@@ -136,7 +136,7 @@ Partial Class Menu_Utama
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(290, 58)
         Me.Button4.TabIndex = 23
-        Me.Button4.Text = "Laporan Bus"
+        Me.Button4.Text = "Laporan Mobil"
         Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button4.UseVisualStyleBackColor = False
