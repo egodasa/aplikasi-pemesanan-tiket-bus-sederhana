@@ -6,7 +6,7 @@
 		<td style="width: 80%;">
 			<div style="text-align: left;">
 				<h2>
-					PT. ASTRA INTERNATIONAL DAIHATSU.TBK<br>
+					PT. MALINDO PRIMA TRANSPORT<br>
 					KOTA PADANG
 				</h2>
 			</div>

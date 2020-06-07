@@ -187,19 +187,19 @@
     <Content Include="laporan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\header_laporan.php">
+    <Content Include="Laporan\header_laporan.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\helper.php">
+    <Content Include="Laporan\helper.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\koneksi.php">
+    <Content Include="Laporan\koneksi.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\laporan-analisa.php">
+    <Content Include="Laporan\laporan-mobil.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\style_laporan.php">
+    <Content Include="Laporan\style_laporan.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="pemesanan.png">
@@ -209,6 +209,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\laporan-tiket.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\laporan-pemesanan.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="My Project\Application.myapp">
@@ -235,7 +241,7 @@
     <Content Include="Database\MySql.Data.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="laporan_program_cobit\logo.jpg">
+    <Content Include="Laporan\logo.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="logo-besar.png">

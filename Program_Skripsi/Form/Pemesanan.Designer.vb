@@ -226,7 +226,7 @@ Partial Class Pemesanan
         Me.Bbatal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bbatal.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bbatal.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bbatal.Location = New System.Drawing.Point(622, 371)
+        Me.Bbatal.Location = New System.Drawing.Point(607, 371)
         Me.Bbatal.Name = "Bbatal"
         Me.Bbatal.Size = New System.Drawing.Size(86, 27)
         Me.Bbatal.TabIndex = 101
@@ -240,11 +240,11 @@ Partial Class Pemesanan
         Me.Bsimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Bsimpan.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsimpan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Bsimpan.Location = New System.Drawing.Point(759, 371)
+        Me.Bsimpan.Location = New System.Drawing.Point(725, 371)
         Me.Bsimpan.Name = "Bsimpan"
-        Me.Bsimpan.Size = New System.Drawing.Size(86, 27)
+        Me.Bsimpan.Size = New System.Drawing.Size(141, 27)
         Me.Bsimpan.TabIndex = 99
-        Me.Bsimpan.Text = "Simpan"
+        Me.Bsimpan.Text = "Simpan/Cetak"
         Me.Bsimpan.UseVisualStyleBackColor = False
         '
         'Tnm_domain
