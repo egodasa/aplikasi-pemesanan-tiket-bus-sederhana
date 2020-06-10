@@ -4,7 +4,7 @@
     Public username As String
     Public url_laporan As String = "http://localhost/laporan_program_cobit/"
     Public Sub TutupForm(ByVal form As Form)
-        Menu_Utama.Show()
+        FMenu_Utama.Show()
         form.Close()
     End Sub
     Private Sub Keluar(sender As Object, e As EventArgs) Handles Breset.Click
@@ -32,7 +32,7 @@
             Me.username = username
             MessageBox.Show("Selamat datang, " & username, "Pesan")
             Me.Hide()
-            Menu_Utama.Show()
+            FMenu_Utama.Show()
         End If
         ResetLogin()
     End Sub

@@ -1,4 +1,4 @@
-﻿Public Class Pemesanan
+﻿Public Class FPemesanan
     Private Sub Pemesanan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

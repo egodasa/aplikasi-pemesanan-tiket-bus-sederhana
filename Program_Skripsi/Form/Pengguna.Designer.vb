@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Pengguna
+Partial Class FPengguna
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Pengguna
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pengguna))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPengguna))
         Me.Tusername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Tpassword = New System.Windows.Forms.TextBox()
@@ -220,7 +220,7 @@ Partial Class Pengguna
         Me.Label6.TabIndex = 60
         Me.Label6.Text = "Level"
         '
-        'Pengguna
+        'FPengguna
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -243,7 +243,7 @@ Partial Class Pengguna
         Me.Controls.Add(Me.Tusername)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Pengguna"
+        Me.Name = "FPengguna"
         Me.Text = "Data Pengguna"
         CType(Me.DGpengguna, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

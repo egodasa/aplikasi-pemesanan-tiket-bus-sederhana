@@ -1,4 +1,4 @@
-﻿Public Class Bus
+﻿Public Class FTiket
     Dim kd_domain As String
     Dim nm_domain As String
     Private Sub AturData()

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Mobil
+Partial Class FMobil
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class Mobil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FMobil))
         Me.Tbahan_bakar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Tjenis = New System.Windows.Forms.TextBox()
@@ -288,7 +289,7 @@ Partial Class Mobil
         Me.Label10.TabIndex = 94
         Me.Label10.Text = "___________________________________________________________"
         '
-        'Mobil
+        'FMobil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -317,7 +318,8 @@ Partial Class Mobil
         Me.Controls.Add(Me.Tkode_mobil)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label10)
-        Me.Name = "Mobil"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "FMobil"
         Me.Text = "Data Mobil"
         CType(Me.DGmobil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Bus
+Partial Class FTiket
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Bus
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bus))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTiket))
         Me.DGtiket = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
@@ -172,9 +172,9 @@ Partial Class Bus
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(14, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 30)
+        Me.Label5.Size = New System.Drawing.Size(111, 30)
         Me.Label5.TabIndex = 59
-        Me.Label5.Text = "Data Bus"
+        Me.Label5.Text = "Data Tiket"
         '
         'Label3
         '
@@ -286,7 +286,7 @@ Partial Class Bus
         Me.Label10.TabIndex = 71
         Me.Label10.Text = "___________________________________________________________"
         '
-        'Bus
+        'FTiket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -317,8 +317,8 @@ Partial Class Bus
         Me.Controls.Add(Me.Label10)
         Me.ForeColor = System.Drawing.Color.White
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Bus"
-        Me.Text = "Data Bus"
+        Me.Name = "FTiket"
+        Me.Text = "Data Tiket"
         CType(Me.DGtiket, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

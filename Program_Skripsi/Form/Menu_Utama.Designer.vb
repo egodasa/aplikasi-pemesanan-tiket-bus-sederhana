@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Menu_Utama
+Partial Class FMenu_Utama
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,15 +22,16 @@ Partial Class Menu_Utama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu_Utama))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FMenu_Utama))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Bbus = New System.Windows.Forms.Button()
         Me.Btiket = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Bpemesanan = New System.Windows.Forms.Button()
+        Me.Blaporan_pemesanan = New System.Windows.Forms.Button()
+        Me.Blaporan_tiket = New System.Windows.Forms.Button()
+        Me.Blaporan_mobil = New System.Windows.Forms.Button()
+        Me.Bkeluar = New System.Windows.Forms.Button()
+        Me.Bpengguna = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,103 +78,120 @@ Partial Class Menu_Utama
         Me.Btiket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btiket.UseVisualStyleBackColor = False
         '
-        'Button1
+        'Bpemesanan
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(18, 205)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(254, 58)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "Data Pemesanan"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Bpemesanan.BackColor = System.Drawing.Color.White
+        Me.Bpemesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Bpemesanan.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bpemesanan.Image = CType(resources.GetObject("Bpemesanan.Image"), System.Drawing.Image)
+        Me.Bpemesanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bpemesanan.Location = New System.Drawing.Point(18, 205)
+        Me.Bpemesanan.Name = "Bpemesanan"
+        Me.Bpemesanan.Size = New System.Drawing.Size(254, 58)
+        Me.Bpemesanan.TabIndex = 22
+        Me.Bpemesanan.Text = "Data Pemesanan"
+        Me.Bpemesanan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bpemesanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Bpemesanan.UseVisualStyleBackColor = False
         '
-        'Button2
+        'Blaporan_pemesanan
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(299, 205)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(290, 58)
-        Me.Button2.TabIndex = 25
-        Me.Button2.Text = "Laporan Pemesanan"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Blaporan_pemesanan.BackColor = System.Drawing.Color.White
+        Me.Blaporan_pemesanan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Blaporan_pemesanan.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Blaporan_pemesanan.Image = CType(resources.GetObject("Blaporan_pemesanan.Image"), System.Drawing.Image)
+        Me.Blaporan_pemesanan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_pemesanan.Location = New System.Drawing.Point(299, 205)
+        Me.Blaporan_pemesanan.Name = "Blaporan_pemesanan"
+        Me.Blaporan_pemesanan.Size = New System.Drawing.Size(290, 58)
+        Me.Blaporan_pemesanan.TabIndex = 25
+        Me.Blaporan_pemesanan.Text = "Laporan Pemesanan"
+        Me.Blaporan_pemesanan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_pemesanan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Blaporan_pemesanan.UseVisualStyleBackColor = False
         '
-        'Button3
+        'Blaporan_tiket
         '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(299, 141)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(290, 58)
-        Me.Button3.TabIndex = 24
-        Me.Button3.Text = "Laporan Tiket"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Blaporan_tiket.BackColor = System.Drawing.Color.White
+        Me.Blaporan_tiket.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Blaporan_tiket.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Blaporan_tiket.Image = CType(resources.GetObject("Blaporan_tiket.Image"), System.Drawing.Image)
+        Me.Blaporan_tiket.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_tiket.Location = New System.Drawing.Point(299, 141)
+        Me.Blaporan_tiket.Name = "Blaporan_tiket"
+        Me.Blaporan_tiket.Size = New System.Drawing.Size(290, 58)
+        Me.Blaporan_tiket.TabIndex = 24
+        Me.Blaporan_tiket.Text = "Laporan Tiket"
+        Me.Blaporan_tiket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_tiket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Blaporan_tiket.UseVisualStyleBackColor = False
         '
-        'Button4
+        'Blaporan_mobil
         '
-        Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(299, 77)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(290, 58)
-        Me.Button4.TabIndex = 23
-        Me.Button4.Text = "Laporan Mobil"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Blaporan_mobil.BackColor = System.Drawing.Color.White
+        Me.Blaporan_mobil.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Blaporan_mobil.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Blaporan_mobil.Image = CType(resources.GetObject("Blaporan_mobil.Image"), System.Drawing.Image)
+        Me.Blaporan_mobil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_mobil.Location = New System.Drawing.Point(299, 77)
+        Me.Blaporan_mobil.Name = "Blaporan_mobil"
+        Me.Blaporan_mobil.Size = New System.Drawing.Size(290, 58)
+        Me.Blaporan_mobil.TabIndex = 23
+        Me.Blaporan_mobil.Text = "Laporan Mobil"
+        Me.Blaporan_mobil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Blaporan_mobil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Blaporan_mobil.UseVisualStyleBackColor = False
         '
-        'Button5
+        'Bkeluar
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(440, 269)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(149, 58)
-        Me.Button5.TabIndex = 26
-        Me.Button5.Text = "Keluar"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.Bkeluar.BackColor = System.Drawing.Color.White
+        Me.Bkeluar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Bkeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bkeluar.Image = CType(resources.GetObject("Bkeluar.Image"), System.Drawing.Image)
+        Me.Bkeluar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bkeluar.Location = New System.Drawing.Point(299, 269)
+        Me.Bkeluar.Name = "Bkeluar"
+        Me.Bkeluar.Size = New System.Drawing.Size(290, 58)
+        Me.Bkeluar.TabIndex = 26
+        Me.Bkeluar.Text = "Keluar"
+        Me.Bkeluar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bkeluar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Bkeluar.UseVisualStyleBackColor = False
         '
-        'Menu_Utama
+        'Bpengguna
+        '
+        Me.Bpengguna.BackColor = System.Drawing.Color.White
+        Me.Bpengguna.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Bpengguna.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bpengguna.Image = CType(resources.GetObject("Bpengguna.Image"), System.Drawing.Image)
+        Me.Bpengguna.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bpengguna.Location = New System.Drawing.Point(18, 269)
+        Me.Bpengguna.Name = "Bpengguna"
+        Me.Bpengguna.Size = New System.Drawing.Size(254, 58)
+        Me.Bpengguna.TabIndex = 27
+        Me.Bpengguna.Text = "Data Pengguna"
+        Me.Bpengguna.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Bpengguna.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Bpengguna.UseVisualStyleBackColor = False
+        '
+        'FMenu_Utama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(620, 346)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Bpengguna)
+        Me.Controls.Add(Me.Bkeluar)
+        Me.Controls.Add(Me.Blaporan_pemesanan)
+        Me.Controls.Add(Me.Blaporan_tiket)
+        Me.Controls.Add(Me.Blaporan_mobil)
+        Me.Controls.Add(Me.Bpemesanan)
         Me.Controls.Add(Me.Btiket)
         Me.Controls.Add(Me.Bbus)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Menu_Utama"
+        Me.Name = "FMenu_Utama"
         Me.Text = "Menu"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -183,9 +201,10 @@ Partial Class Menu_Utama
     Friend WithEvents Label1 As Label
     Friend WithEvents Bbus As Button
     Friend WithEvents Btiket As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Bpemesanan As Button
+    Friend WithEvents Blaporan_pemesanan As Button
+    Friend WithEvents Blaporan_tiket As Button
+    Friend WithEvents Blaporan_mobil As Button
+    Friend WithEvents Bkeluar As Button
+    Friend WithEvents Bpengguna As Button
 End Class

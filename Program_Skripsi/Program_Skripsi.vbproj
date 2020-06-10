@@ -209,6 +209,7 @@
     <Content Include="pemesanan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="pengguna.png" />
     <Content Include="tiket.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

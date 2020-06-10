@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Pemesanan
+Partial Class FPemesanan
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Pemesanan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pemesanan))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPemesanan))
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -77,10 +77,10 @@ Partial Class Pemesanan
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -615,6 +615,15 @@ Partial Class Pemesanan
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Penumpang"
         '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.CustomFormat = "H:m"
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker3.Location = New System.Drawing.Point(129, 125)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(161, 20)
+        Me.DateTimePicker3.TabIndex = 154
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TextBox7)
@@ -677,16 +686,7 @@ Partial Class Pemesanan
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Pembayaran"
         '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.CustomFormat = "H:m"
-        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(129, 125)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(161, 20)
-        Me.DateTimePicker3.TabIndex = 154
-        '
-        'Pemesanan
+        'FPemesanan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -709,7 +709,7 @@ Partial Class Pemesanan
         Me.Controls.Add(Me.Tkd_domain)
         Me.Controls.Add(Me.Label4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Pemesanan"
+        Me.Name = "FPemesanan"
         Me.Text = "Pemesanan"
         CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

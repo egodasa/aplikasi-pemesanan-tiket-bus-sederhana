@@ -1,4 +1,4 @@
-﻿Public Class Pengguna
+﻿Public Class FPengguna
     Dim username As String
     Dim password As String
     Dim email As String
