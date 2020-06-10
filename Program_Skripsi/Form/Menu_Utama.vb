@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub UserMenu(sender As Object, e As EventArgs)
-        User.Show()
+        Pengguna.Show()
         Me.Hide()
     End Sub
 

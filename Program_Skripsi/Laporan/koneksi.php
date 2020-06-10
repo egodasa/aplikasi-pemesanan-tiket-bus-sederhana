@@ -2,6 +2,6 @@
 $server = "localhost";
 $username = "root";
 $password = "mysql";
-$database = "daihatsu_cobit";
+$database = "db_bus";
 $koneksi = mysqli_connect($server,$username,$password,$database);
 ?>

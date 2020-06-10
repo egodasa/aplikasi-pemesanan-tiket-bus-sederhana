@@ -22,38 +22,38 @@ Partial Class Mobil
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Tbahan_bakar = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Tjenis = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Twarna = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Tmerk = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Bedit = New System.Windows.Forms.Button()
-        Me.DGdomain = New System.Windows.Forms.DataGridView()
+        Me.DGmobil = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bhapus = New System.Windows.Forms.Button()
         Me.Bsimpan = New System.Windows.Forms.Button()
-        Me.Tnm_domain = New System.Windows.Forms.TextBox()
+        Me.Tno_polisi = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Tkd_domain = New System.Windows.Forms.TextBox()
+        Me.Tkode_mobil = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGmobil, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox4
+        'Tbahan_bakar
         '
-        Me.TextBox4.Location = New System.Drawing.Point(361, 332)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox4.TabIndex = 93
+        Me.Tbahan_bakar.Location = New System.Drawing.Point(361, 332)
+        Me.Tbahan_bakar.Name = "Tbahan_bakar"
+        Me.Tbahan_bakar.Size = New System.Drawing.Size(163, 20)
+        Me.Tbahan_bakar.TabIndex = 93
         '
         'Label8
         '
@@ -66,12 +66,12 @@ Partial Class Mobil
         Me.Label8.TabIndex = 92
         Me.Label8.Text = "Bahan Bakar"
         '
-        'TextBox5
+        'Tjenis
         '
-        Me.TextBox5.Location = New System.Drawing.Point(117, 332)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox5.TabIndex = 91
+        Me.Tjenis.Location = New System.Drawing.Point(117, 332)
+        Me.Tjenis.Name = "Tjenis"
+        Me.Tjenis.Size = New System.Drawing.Size(129, 20)
+        Me.Tjenis.TabIndex = 91
         '
         'Label9
         '
@@ -84,12 +84,12 @@ Partial Class Mobil
         Me.Label9.TabIndex = 90
         Me.Label9.Text = "Jenis"
         '
-        'TextBox2
+        'Twarna
         '
-        Me.TextBox2.Location = New System.Drawing.Point(361, 295)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox2.TabIndex = 89
+        Me.Twarna.Location = New System.Drawing.Point(361, 295)
+        Me.Twarna.Name = "Twarna"
+        Me.Twarna.Size = New System.Drawing.Size(163, 20)
+        Me.Twarna.TabIndex = 89
         '
         'Label6
         '
@@ -102,12 +102,12 @@ Partial Class Mobil
         Me.Label6.TabIndex = 88
         Me.Label6.Text = "Warna"
         '
-        'TextBox3
+        'Tmerk
         '
-        Me.TextBox3.Location = New System.Drawing.Point(361, 261)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox3.TabIndex = 87
+        Me.Tmerk.Location = New System.Drawing.Point(361, 261)
+        Me.Tmerk.Name = "Tmerk"
+        Me.Tmerk.Size = New System.Drawing.Size(163, 20)
+        Me.Tmerk.TabIndex = 87
         '
         'Label7
         '
@@ -174,16 +174,16 @@ Partial Class Mobil
         Me.Bedit.Text = "Edit"
         Me.Bedit.UseVisualStyleBackColor = False
         '
-        'DGdomain
+        'DGmobil
         '
-        Me.DGdomain.AllowUserToAddRows = False
-        Me.DGdomain.AllowUserToDeleteRows = False
-        Me.DGdomain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGdomain.Location = New System.Drawing.Point(12, 84)
-        Me.DGdomain.Name = "DGdomain"
-        Me.DGdomain.ReadOnly = True
-        Me.DGdomain.Size = New System.Drawing.Size(529, 157)
-        Me.DGdomain.TabIndex = 80
+        Me.DGmobil.AllowUserToAddRows = False
+        Me.DGmobil.AllowUserToDeleteRows = False
+        Me.DGmobil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGmobil.Location = New System.Drawing.Point(12, 84)
+        Me.DGmobil.Name = "DGmobil"
+        Me.DGmobil.ReadOnly = True
+        Me.DGmobil.Size = New System.Drawing.Size(529, 157)
+        Me.DGmobil.TabIndex = 80
         '
         'Btutup
         '
@@ -241,12 +241,12 @@ Partial Class Mobil
         Me.Bsimpan.Text = "Simpan"
         Me.Bsimpan.UseVisualStyleBackColor = False
         '
-        'Tnm_domain
+        'Tno_polisi
         '
-        Me.Tnm_domain.Location = New System.Drawing.Point(117, 295)
-        Me.Tnm_domain.Name = "Tnm_domain"
-        Me.Tnm_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tnm_domain.TabIndex = 75
+        Me.Tno_polisi.Location = New System.Drawing.Point(117, 295)
+        Me.Tno_polisi.Name = "Tno_polisi"
+        Me.Tno_polisi.Size = New System.Drawing.Size(129, 20)
+        Me.Tno_polisi.TabIndex = 75
         '
         'Label1
         '
@@ -259,12 +259,12 @@ Partial Class Mobil
         Me.Label1.TabIndex = 74
         Me.Label1.Text = "No Polisi"
         '
-        'Tkd_domain
+        'Tkode_mobil
         '
-        Me.Tkd_domain.Location = New System.Drawing.Point(117, 261)
-        Me.Tkd_domain.Name = "Tkd_domain"
-        Me.Tkd_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tkd_domain.TabIndex = 73
+        Me.Tkode_mobil.Location = New System.Drawing.Point(117, 261)
+        Me.Tkode_mobil.Name = "Tkode_mobil"
+        Me.Tkode_mobil.Size = New System.Drawing.Size(129, 20)
+        Me.Tkode_mobil.TabIndex = 73
         '
         'Label4
         '
@@ -294,58 +294,58 @@ Partial Class Mobil
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(562, 436)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Tbahan_bakar)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Tjenis)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Twarna)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Tmerk)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Bedit)
-        Me.Controls.Add(Me.DGdomain)
+        Me.Controls.Add(Me.DGmobil)
         Me.Controls.Add(Me.Btutup)
         Me.Controls.Add(Me.Bbatal)
         Me.Controls.Add(Me.Bhapus)
         Me.Controls.Add(Me.Bsimpan)
-        Me.Controls.Add(Me.Tnm_domain)
+        Me.Controls.Add(Me.Tno_polisi)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Tkd_domain)
+        Me.Controls.Add(Me.Tkode_mobil)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label10)
         Me.Name = "Mobil"
         Me.Text = "Data Mobil"
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGmobil, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Tbahan_bakar As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Tjenis As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Twarna As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Tmerk As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Bedit As Button
-    Friend WithEvents DGdomain As DataGridView
+    Friend WithEvents DGmobil As DataGridView
     Friend WithEvents Btutup As Button
     Friend WithEvents Bbatal As Button
     Friend WithEvents Bhapus As Button
     Friend WithEvents Bsimpan As Button
-    Friend WithEvents Tnm_domain As TextBox
+    Friend WithEvents Tno_polisi As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Tkd_domain As TextBox
+    Friend WithEvents Tkode_mobil As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label10 As Label
 End Class

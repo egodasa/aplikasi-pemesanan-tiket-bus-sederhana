@@ -26,22 +26,22 @@
 				<th class="table-th">Kelas</th>
 				<th class="table-th">Harga</th>
 				<th class="table-th">Jumlah Bus</th>
-				<th class="table-th">Jumlah Bus</th>
+				<th class="table-th">Jumlah Tiket</th>
 			</tr>
 			<?php
 				$no = 1;
-				$sql_query = mysqli_query($koneksi, "Select * From laporan_analisa ORDER BY kd_domain");
+				$sql_query = mysqli_query($koneksi, "Select * From tb_tiket");
 				while($nilai = mysqli_fetch_assoc($sql_query))
 				{
 			?>
 				<tr>
 					<td class="table-td"><?=$no?></td>
-					<td class="table-td"><?=$nilai['kd_domain']?></td>
-					<td class="table-td"><?=$nilai['nm_domain']?></td>
-					<td class="table-td"><?=$nilai['indeks_maturity']?></td>
-					<td class="table-td"><?=$nilai['gap']?></td>
-					<td class="table-td"><?=$nilai['harapan']?></td>
-					<td class="table-td"><?=$keterangan?></td>
+					<td class="table-td"><?=$nilai['kode_tiket']?></td>
+					<td class="table-td"><?=$nilai['jurusan']?></td>
+					<td class="table-td"><?=$nilai['kelas']?></td>
+					<td class="table-td"><?=$nilai['harga']?></td>
+					<td class="table-td"><?=$nilai['jumlah_bus']?></td>
+					<td class="table-td"><?=$nilai['jumlah_tiket']?></td>
 				</tr>
 			<?php
 					$no++;

@@ -1,4 +1,4 @@
-﻿Public Class User
+﻿Public Class Pengguna
     Dim username As String
     Dim password As String
     Dim email As String
@@ -6,23 +6,23 @@
     Private Sub AturData()
         username = Tusername.Text
         password = Tpassword.Text
-        email = Temail.Text
+        email = Tnama_lengkap.Text
     End Sub
     Private Sub ResetForm(sender As Object, e As EventArgs) Handles Bbatal.Click
         Tusername.Clear()
         Tpassword.Clear()
-        Temail.Clear()
+        Tnama_lengkap.Clear()
     End Sub
 
     Private Sub TampilkanData(Optional ByVal kata_kunci As String = "")
-        DGuser.DataSource = Aplikasi.Db.JalankanDanAmbilData("SELECT id_user, username, email FROM tbl_user")
+        DGpengguna.DataSource = Aplikasi.Db.JalankanDanAmbilData("SELECT id_user, username, email FROM tbl_user")
     End Sub
 
-    Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs) Handles DGuser.CellContentDoubleClick
-        Dim data_terpilih As DataGridViewRow = DGuser.CurrentRow
+    Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs) Handles DGpengguna.CellContentDoubleClick
+        Dim data_terpilih As DataGridViewRow = DGpengguna.CurrentRow
         id_user = data_terpilih.Cells("id_user").Value
         Tusername.Text = data_terpilih.Cells("username").Value
-        Temail.Text = data_terpilih.Cells("email").Value
+        Tnama_lengkap.Text = data_terpilih.Cells("email").Value
     End Sub
     Private Sub ProsesTambahData(sender As Object, e As EventArgs) Handles Bsimpan.Click
         Me.AturData()
@@ -51,7 +51,7 @@
         End If
     End Sub
     Private Sub ProsesHapusData(sender As Object, e As EventArgs) Handles Bhapus.Click
-        Dim kode = DGuser.CurrentRow.Cells("id_user").Value
+        Dim kode = DGpengguna.CurrentRow.Cells("id_user").Value
         Aplikasi.Db.JalankanSql("DELETE FROM tbl_user WHERE id_user = '" & kode & "'")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())

@@ -23,42 +23,42 @@ Partial Class Bus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bus))
-        Me.DGdomain = New System.Windows.Forms.DataGridView()
+        Me.DGtiket = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bhapus = New System.Windows.Forms.Button()
         Me.Bsimpan = New System.Windows.Forms.Button()
-        Me.Tnm_domain = New System.Windows.Forms.TextBox()
+        Me.Tjurusan = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Tkd_domain = New System.Windows.Forms.TextBox()
+        Me.Tkode_tiket = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Bedit = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Tharga = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Tkelas = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Tjumlah_tiket = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Tjumlah_bus = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGtiket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DGdomain
+        'DGtiket
         '
-        Me.DGdomain.AllowUserToAddRows = False
-        Me.DGdomain.AllowUserToDeleteRows = False
-        Me.DGdomain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGdomain.Location = New System.Drawing.Point(19, 89)
-        Me.DGdomain.Name = "DGdomain"
-        Me.DGdomain.ReadOnly = True
-        Me.DGdomain.Size = New System.Drawing.Size(529, 157)
-        Me.DGdomain.TabIndex = 46
+        Me.DGtiket.AllowUserToAddRows = False
+        Me.DGtiket.AllowUserToDeleteRows = False
+        Me.DGtiket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGtiket.Location = New System.Drawing.Point(19, 89)
+        Me.DGtiket.Name = "DGtiket"
+        Me.DGtiket.ReadOnly = True
+        Me.DGtiket.Size = New System.Drawing.Size(529, 157)
+        Me.DGtiket.TabIndex = 46
         '
         'Btutup
         '
@@ -116,12 +116,12 @@ Partial Class Bus
         Me.Bsimpan.Text = "Simpan"
         Me.Bsimpan.UseVisualStyleBackColor = False
         '
-        'Tnm_domain
+        'Tjurusan
         '
-        Me.Tnm_domain.Location = New System.Drawing.Point(124, 300)
-        Me.Tnm_domain.Name = "Tnm_domain"
-        Me.Tnm_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tnm_domain.TabIndex = 31
+        Me.Tjurusan.Location = New System.Drawing.Point(124, 300)
+        Me.Tjurusan.Name = "Tjurusan"
+        Me.Tjurusan.Size = New System.Drawing.Size(129, 20)
+        Me.Tjurusan.TabIndex = 31
         '
         'Label1
         '
@@ -134,12 +134,12 @@ Partial Class Bus
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Jurusan"
         '
-        'Tkd_domain
+        'Tkode_tiket
         '
-        Me.Tkd_domain.Location = New System.Drawing.Point(124, 266)
-        Me.Tkd_domain.Name = "Tkd_domain"
-        Me.Tkd_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tkd_domain.TabIndex = 29
+        Me.Tkode_tiket.Location = New System.Drawing.Point(124, 266)
+        Me.Tkode_tiket.Name = "Tkode_tiket"
+        Me.Tkode_tiket.Size = New System.Drawing.Size(129, 20)
+        Me.Tkode_tiket.TabIndex = 29
         '
         'Label4
         '
@@ -204,12 +204,12 @@ Partial Class Bus
         Me.Label2.TabIndex = 62
         Me.Label2.Text = "Pencarian"
         '
-        'TextBox2
+        'Tharga
         '
-        Me.TextBox2.Location = New System.Drawing.Point(368, 300)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox2.TabIndex = 66
+        Me.Tharga.Location = New System.Drawing.Point(368, 300)
+        Me.Tharga.Name = "Tharga"
+        Me.Tharga.Size = New System.Drawing.Size(163, 20)
+        Me.Tharga.TabIndex = 66
         '
         'Label6
         '
@@ -222,12 +222,12 @@ Partial Class Bus
         Me.Label6.TabIndex = 65
         Me.Label6.Text = "Harga"
         '
-        'TextBox3
+        'Tkelas
         '
-        Me.TextBox3.Location = New System.Drawing.Point(368, 266)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox3.TabIndex = 64
+        Me.Tkelas.Location = New System.Drawing.Point(368, 266)
+        Me.Tkelas.Name = "Tkelas"
+        Me.Tkelas.Size = New System.Drawing.Size(163, 20)
+        Me.Tkelas.TabIndex = 64
         '
         'Label7
         '
@@ -239,12 +239,12 @@ Partial Class Bus
         Me.Label7.TabIndex = 63
         Me.Label7.Text = "Kelas"
         '
-        'TextBox4
+        'Tjumlah_tiket
         '
-        Me.TextBox4.Location = New System.Drawing.Point(368, 337)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox4.TabIndex = 70
+        Me.Tjumlah_tiket.Location = New System.Drawing.Point(368, 337)
+        Me.Tjumlah_tiket.Name = "Tjumlah_tiket"
+        Me.Tjumlah_tiket.Size = New System.Drawing.Size(163, 20)
+        Me.Tjumlah_tiket.TabIndex = 70
         '
         'Label8
         '
@@ -253,16 +253,16 @@ Partial Class Bus
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(276, 337)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(77, 17)
+        Me.Label8.Size = New System.Drawing.Size(84, 17)
         Me.Label8.TabIndex = 69
-        Me.Label8.Text = "Jumlh Tiket"
+        Me.Label8.Text = "Jumlah Tiket"
         '
-        'TextBox5
+        'Tjumlah_bus
         '
-        Me.TextBox5.Location = New System.Drawing.Point(124, 337)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox5.TabIndex = 68
+        Me.Tjumlah_bus.Location = New System.Drawing.Point(124, 337)
+        Me.Tjumlah_bus.Name = "Tjumlah_bus"
+        Me.Tjumlah_bus.Size = New System.Drawing.Size(129, 20)
+        Me.Tjumlah_bus.TabIndex = 68
         '
         'Label9
         '
@@ -292,59 +292,59 @@ Partial Class Bus
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(563, 425)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Tjumlah_tiket)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Tjumlah_bus)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Tharga)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Tkelas)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Bedit)
-        Me.Controls.Add(Me.DGdomain)
+        Me.Controls.Add(Me.DGtiket)
         Me.Controls.Add(Me.Btutup)
         Me.Controls.Add(Me.Bbatal)
         Me.Controls.Add(Me.Bhapus)
         Me.Controls.Add(Me.Bsimpan)
-        Me.Controls.Add(Me.Tnm_domain)
+        Me.Controls.Add(Me.Tjurusan)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Tkd_domain)
+        Me.Controls.Add(Me.Tkode_tiket)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label10)
         Me.ForeColor = System.Drawing.Color.White
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Bus"
         Me.Text = "Data Bus"
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGtiket, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DGdomain As DataGridView
+    Friend WithEvents DGtiket As DataGridView
     Friend WithEvents Btutup As Button
     Friend WithEvents Bbatal As Button
     Friend WithEvents Bhapus As Button
     Friend WithEvents Bsimpan As Button
-    Friend WithEvents Tnm_domain As TextBox
+    Friend WithEvents Tjurusan As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Tkd_domain As TextBox
+    Friend WithEvents Tkode_tiket As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Bedit As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Tharga As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Tkelas As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Tjumlah_tiket As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Tjumlah_bus As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
 End Class

@@ -30,18 +30,18 @@
 			</tr>
 			<?php
 				$no = 1;
-				$sql_query = mysqli_query($koneksi, "Select * From laporan_analisa ORDER BY kd_domain");
+				$sql_query = mysqli_query($koneksi, "Select * From tb_mobil");
 				while($nilai = mysqli_fetch_assoc($sql_query))
 				{
 			?>
 				<tr>
 					<td class="table-td"><?=$no?></td>
-					<td class="table-td"><?=$nilai['kd_domain']?></td>
-					<td class="table-td"><?=$nilai['nm_domain']?></td>
-					<td class="table-td"><?=$nilai['indeks_maturity']?></td>
-					<td class="table-td"><?=$nilai['gap']?></td>
-					<td class="table-td"><?=$nilai['harapan']?></td>
-					<td class="table-td"><?=$keterangan?></td>
+					<td class="table-td"><?=$nilai['kode_mobil']?></td>
+					<td class="table-td"><?=$nilai['no_polisi']?></td>
+					<td class="table-td"><?=$nilai['jenis']?></td>
+					<td class="table-td"><?=$nilai['merk']?></td>
+					<td class="table-td"><?=$nilai['warna']?></td>
+					<td class="table-td"><?=$nilai['bahan_bakar']?></td>
 				</tr>
 			<?php
 					$no++;

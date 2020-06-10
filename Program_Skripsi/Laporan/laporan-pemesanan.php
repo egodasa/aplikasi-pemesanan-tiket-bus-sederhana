@@ -33,18 +33,21 @@
 			</tr>
 			<?php
 				$no = 1;
-				$sql_query = mysqli_query($koneksi, "Select * From laporan_analisa ORDER BY kd_domain");
+				$sql_query = mysqli_query($koneksi, "Select * From tb_pemesanan");
 				while($nilai = mysqli_fetch_assoc($sql_query))
 				{
 			?>
 				<tr>
 					<td class="table-td"><?=$no?></td>
-					<td class="table-td"><?=$nilai['kd_domain']?></td>
-					<td class="table-td"><?=$nilai['nm_domain']?></td>
-					<td class="table-td"><?=$nilai['indeks_maturity']?></td>
-					<td class="table-td"><?=$nilai['gap']?></td>
-					<td class="table-td"><?=$nilai['harapan']?></td>
-					<td class="table-td"><?=$keterangan?></td>
+					<td class="table-td"><?=$nilai['kode_pemesanan']?></td>
+					<td class="table-td"><?=$nilai['nama_pembeli']?></td>
+					<td class="table-td"><?=$nilai['telpon']?></td>
+					<td class="table-td"><?=tanggal_indo($nilai['tgl_transaksi'])?></td>
+					<td class="table-td"><?=tanggal_indo($nilai['tgl_berangkat'])?></td>
+					<td class="table-td"><?=$nilai['jam_berangkat']?></td>
+					<td class="table-td"><?=$nilai['jumlah_beli']?></td>
+					<td class="table-td"><?=$nilai['no_bangku']?></td>
+					<td class="table-td"><?=$nilai['total_bayar']?></td>
 				</tr>
 			<?php
 					$no++;

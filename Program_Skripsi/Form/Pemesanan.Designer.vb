@@ -54,7 +54,6 @@ Partial Class Pemesanan
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -81,6 +80,7 @@ Partial Class Pemesanan
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -369,6 +369,8 @@ Partial Class Pemesanan
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(128, 73)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(161, 20)
@@ -376,6 +378,8 @@ Partial Class Pemesanan
         '
         'DateTimePicker2
         '
+        Me.DateTimePicker2.CustomFormat = "dd-MM-yyyy"
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.Location = New System.Drawing.Point(128, 99)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(161, 20)
@@ -388,13 +392,6 @@ Partial Class Pemesanan
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(129, 21)
         Me.ComboBox2.TabIndex = 133
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(128, 125)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox3.TabIndex = 132
         '
         'Label16
         '
@@ -600,6 +597,7 @@ Partial Class Pemesanan
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.TextBox18)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -609,7 +607,6 @@ Partial Class Pemesanan
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 92)
         Me.GroupBox1.Name = "GroupBox1"
@@ -679,6 +676,15 @@ Partial Class Pemesanan
         Me.GroupBox4.TabIndex = 125
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Pembayaran"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.CustomFormat = "H:m"
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker3.Location = New System.Drawing.Point(129, 125)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(161, 20)
+        Me.DateTimePicker3.TabIndex = 154
         '
         'Pemesanan
         '
@@ -750,7 +756,6 @@ Partial Class Pemesanan
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents TextBox9 As TextBox
@@ -777,4 +782,5 @@ Partial Class Pemesanan
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents DateTimePicker3 As DateTimePicker
 End Class
