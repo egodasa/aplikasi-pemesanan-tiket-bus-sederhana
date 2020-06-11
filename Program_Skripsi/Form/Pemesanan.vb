@@ -2,13 +2,13 @@
     Private data_mobil As DataTable
     Private data_tiket As DataTable
     Private Sub AmbilDataMobil()
-        data_mobil = Aplikasi.Db.JalankanDanAmbilData("SELECT *, CONCAT(merk, ' - ', jenis, ' - ', no_polisi) AS keterangan FROM tb_mobil ORDER BY kode_mobil")
+        data_mobil = Aplikasi.Db.JalankanDanAmbilData("SELECT *, merk & ' - ' & jenis & ' - ' & no_polisi AS keterangan FROM tb_mobil ORDER BY kode_mobil")
         Ckode_mobil.DataSource = data_mobil
         Ckode_mobil.ValueMember = "kode_mobil"
         Ckode_mobil.DisplayMember = "keterangan"
     End Sub
     Private Sub AmbilDataTiket()
-        data_tiket = Aplikasi.Db.JalankanDanAmbilData("SELECT *, CONCAT(jurusan, ' - ', kelas) AS keterangan FROM tb_tiker ORDER BY kode_tiket")
+        data_tiket = Aplikasi.Db.JalankanDanAmbilData("SELECT *, jurusan & ' - ' & kelas AS keterangan FROM tb_tiker ORDER BY kode_tiket")
         Ckode_tiket.DataSource = data_tiket
         Ckode_mobil.ValueMember = "kode_tiket"
         Ckode_mobil.DisplayMember = "keterangan"
