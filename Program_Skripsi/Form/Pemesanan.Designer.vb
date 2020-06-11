@@ -23,61 +23,61 @@ Partial Class FPemesanan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPemesanan))
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Tjenis = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Ttelpon = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Tno_polisi = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tcari = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DGdomain = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bsimpan = New System.Windows.Forms.Button()
-        Me.Tnm_domain = New System.Windows.Forms.TextBox()
+        Me.Tnama_kasir = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Tkd_domain = New System.Windows.Forms.TextBox()
+        Me.Tkode_pemesanan = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Tbahan_bakar = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Twarna = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Tmerk = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Ckode_mobil = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Ttgl_transaksi = New System.Windows.Forms.DateTimePicker()
+        Me.Ttgl_berangkat = New System.Windows.Forms.DateTimePicker()
+        Me.Ckode_tiket = New System.Windows.Forms.ComboBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Tjumlah_beli = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Tjumlah_bus = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.Tharga = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.Tkelas = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Tjurusan = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Tsisa = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Tdibayar = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Ttotal_bayar = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.Tno_bangku = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.Tnm_pembeli = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.Tjam_berangkat = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -88,12 +88,13 @@ Partial Class FPemesanan
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox4
+        'Tjenis
         '
-        Me.TextBox4.Location = New System.Drawing.Point(115, 71)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox4.TabIndex = 116
+        Me.Tjenis.Location = New System.Drawing.Point(115, 71)
+        Me.Tjenis.Name = "Tjenis"
+        Me.Tjenis.ReadOnly = True
+        Me.Tjenis.Size = New System.Drawing.Size(129, 20)
+        Me.Tjenis.TabIndex = 116
         '
         'Label8
         '
@@ -106,12 +107,12 @@ Partial Class FPemesanan
         Me.Label8.TabIndex = 115
         Me.Label8.Text = "Jenis"
         '
-        'TextBox5
+        'Ttelpon
         '
-        Me.TextBox5.Location = New System.Drawing.Point(128, 47)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox5.TabIndex = 114
+        Me.Ttelpon.Location = New System.Drawing.Point(128, 47)
+        Me.Ttelpon.Name = "Ttelpon"
+        Me.Ttelpon.Size = New System.Drawing.Size(161, 20)
+        Me.Ttelpon.TabIndex = 114
         '
         'Label9
         '
@@ -124,12 +125,13 @@ Partial Class FPemesanan
         Me.Label9.TabIndex = 113
         Me.Label9.Text = "Telepon"
         '
-        'TextBox2
+        'Tno_polisi
         '
-        Me.TextBox2.Location = New System.Drawing.Point(115, 45)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox2.TabIndex = 112
+        Me.Tno_polisi.Location = New System.Drawing.Point(115, 45)
+        Me.Tno_polisi.Name = "Tno_polisi"
+        Me.Tno_polisi.ReadOnly = True
+        Me.Tno_polisi.Size = New System.Drawing.Size(129, 20)
+        Me.Tno_polisi.TabIndex = 112
         '
         'Label6
         '
@@ -164,12 +166,12 @@ Partial Class FPemesanan
         Me.Label2.TabIndex = 108
         Me.Label2.Text = "Pencarian"
         '
-        'TextBox1
+        'Tcari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(141, 413)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(725, 20)
-        Me.TextBox1.TabIndex = 107
+        Me.Tcari.Location = New System.Drawing.Point(141, 413)
+        Me.Tcari.Name = "Tcari"
+        Me.Tcari.Size = New System.Drawing.Size(725, 20)
+        Me.Tcari.TabIndex = 107
         '
         'Label5
         '
@@ -247,12 +249,13 @@ Partial Class FPemesanan
         Me.Bsimpan.Text = "Simpan/Cetak"
         Me.Bsimpan.UseVisualStyleBackColor = False
         '
-        'Tnm_domain
+        'Tnama_kasir
         '
-        Me.Tnm_domain.Location = New System.Drawing.Point(396, 66)
-        Me.Tnm_domain.Name = "Tnm_domain"
-        Me.Tnm_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tnm_domain.TabIndex = 98
+        Me.Tnama_kasir.Location = New System.Drawing.Point(396, 66)
+        Me.Tnama_kasir.Name = "Tnama_kasir"
+        Me.Tnama_kasir.ReadOnly = True
+        Me.Tnama_kasir.Size = New System.Drawing.Size(129, 20)
+        Me.Tnama_kasir.TabIndex = 98
         '
         'Label1
         '
@@ -265,12 +268,13 @@ Partial Class FPemesanan
         Me.Label1.TabIndex = 97
         Me.Label1.Text = "Nama Kasir"
         '
-        'Tkd_domain
+        'Tkode_pemesanan
         '
-        Me.Tkd_domain.Location = New System.Drawing.Point(126, 66)
-        Me.Tkd_domain.Name = "Tkd_domain"
-        Me.Tkd_domain.Size = New System.Drawing.Size(129, 20)
-        Me.Tkd_domain.TabIndex = 96
+        Me.Tkode_pemesanan.Location = New System.Drawing.Point(126, 66)
+        Me.Tkode_pemesanan.Name = "Tkode_pemesanan"
+        Me.Tkode_pemesanan.ReadOnly = True
+        Me.Tkode_pemesanan.Size = New System.Drawing.Size(129, 20)
+        Me.Tkode_pemesanan.TabIndex = 96
         '
         'Label4
         '
@@ -283,12 +287,13 @@ Partial Class FPemesanan
         Me.Label4.TabIndex = 95
         Me.Label4.Text = "No Tiket"
         '
-        'TextBox6
+        'Tbahan_bakar
         '
-        Me.TextBox6.Location = New System.Drawing.Point(115, 149)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox6.TabIndex = 123
+        Me.Tbahan_bakar.Location = New System.Drawing.Point(115, 149)
+        Me.Tbahan_bakar.Name = "Tbahan_bakar"
+        Me.Tbahan_bakar.ReadOnly = True
+        Me.Tbahan_bakar.Size = New System.Drawing.Size(129, 20)
+        Me.Tbahan_bakar.TabIndex = 123
         '
         'Label11
         '
@@ -301,12 +306,13 @@ Partial Class FPemesanan
         Me.Label11.TabIndex = 122
         Me.Label11.Text = "Bahan Bakar"
         '
-        'TextBox7
+        'Twarna
         '
-        Me.TextBox7.Location = New System.Drawing.Point(115, 123)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox7.TabIndex = 121
+        Me.Twarna.Location = New System.Drawing.Point(115, 123)
+        Me.Twarna.Name = "Twarna"
+        Me.Twarna.ReadOnly = True
+        Me.Twarna.Size = New System.Drawing.Size(129, 20)
+        Me.Twarna.TabIndex = 121
         '
         'Label12
         '
@@ -319,12 +325,13 @@ Partial Class FPemesanan
         Me.Label12.TabIndex = 120
         Me.Label12.Text = "Warna"
         '
-        'TextBox8
+        'Tmerk
         '
-        Me.TextBox8.Location = New System.Drawing.Point(115, 97)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox8.TabIndex = 119
+        Me.Tmerk.Location = New System.Drawing.Point(115, 97)
+        Me.Tmerk.Name = "Tmerk"
+        Me.Tmerk.ReadOnly = True
+        Me.Tmerk.Size = New System.Drawing.Size(129, 20)
+        Me.Tmerk.TabIndex = 119
         '
         'Label13
         '
@@ -337,13 +344,13 @@ Partial Class FPemesanan
         Me.Label13.TabIndex = 118
         Me.Label13.Text = "Merk"
         '
-        'ComboBox1
+        'Ckode_mobil
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(115, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(129, 21)
-        Me.ComboBox1.TabIndex = 124
+        Me.Ckode_mobil.FormattingEnabled = True
+        Me.Ckode_mobil.Location = New System.Drawing.Point(115, 19)
+        Me.Ckode_mobil.Name = "Ckode_mobil"
+        Me.Ckode_mobil.Size = New System.Drawing.Size(129, 21)
+        Me.Ckode_mobil.TabIndex = 124
         '
         'Label14
         '
@@ -367,31 +374,31 @@ Partial Class FPemesanan
         Me.Label15.TabIndex = 125
         Me.Label15.Text = "Tgl Transaksi"
         '
-        'DateTimePicker1
+        'Ttgl_transaksi
         '
-        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(128, 73)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(161, 20)
-        Me.DateTimePicker1.TabIndex = 128
+        Me.Ttgl_transaksi.CustomFormat = "dd-MM-yyyy"
+        Me.Ttgl_transaksi.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Ttgl_transaksi.Location = New System.Drawing.Point(128, 73)
+        Me.Ttgl_transaksi.Name = "Ttgl_transaksi"
+        Me.Ttgl_transaksi.Size = New System.Drawing.Size(161, 20)
+        Me.Ttgl_transaksi.TabIndex = 128
         '
-        'DateTimePicker2
+        'Ttgl_berangkat
         '
-        Me.DateTimePicker2.CustomFormat = "dd-MM-yyyy"
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(128, 99)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(161, 20)
-        Me.DateTimePicker2.TabIndex = 129
+        Me.Ttgl_berangkat.CustomFormat = "dd-MM-yyyy"
+        Me.Ttgl_berangkat.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Ttgl_berangkat.Location = New System.Drawing.Point(128, 99)
+        Me.Ttgl_berangkat.Name = "Ttgl_berangkat"
+        Me.Ttgl_berangkat.Size = New System.Drawing.Size(161, 20)
+        Me.Ttgl_berangkat.TabIndex = 129
         '
-        'ComboBox2
+        'Ckode_tiket
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(126, 19)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(129, 21)
-        Me.ComboBox2.TabIndex = 133
+        Me.Ckode_tiket.FormattingEnabled = True
+        Me.Ckode_tiket.Location = New System.Drawing.Point(126, 19)
+        Me.Ckode_tiket.Name = "Ckode_tiket"
+        Me.Ckode_tiket.Size = New System.Drawing.Size(129, 21)
+        Me.Ckode_tiket.TabIndex = 133
         '
         'Label16
         '
@@ -415,12 +422,12 @@ Partial Class FPemesanan
         Me.Label17.TabIndex = 130
         Me.Label17.Text = "Kode Tiket"
         '
-        'TextBox9
+        'Tjumlah_beli
         '
-        Me.TextBox9.Location = New System.Drawing.Point(126, 177)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox9.TabIndex = 143
+        Me.Tjumlah_beli.Location = New System.Drawing.Point(126, 177)
+        Me.Tjumlah_beli.Name = "Tjumlah_beli"
+        Me.Tjumlah_beli.Size = New System.Drawing.Size(129, 20)
+        Me.Tjumlah_beli.TabIndex = 143
         '
         'Label18
         '
@@ -433,12 +440,13 @@ Partial Class FPemesanan
         Me.Label18.TabIndex = 142
         Me.Label18.Text = "Jumlah Beli"
         '
-        'TextBox10
+        'Tjumlah_bus
         '
-        Me.TextBox10.Location = New System.Drawing.Point(126, 125)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox10.TabIndex = 141
+        Me.Tjumlah_bus.Location = New System.Drawing.Point(126, 125)
+        Me.Tjumlah_bus.Name = "Tjumlah_bus"
+        Me.Tjumlah_bus.ReadOnly = True
+        Me.Tjumlah_bus.Size = New System.Drawing.Size(129, 20)
+        Me.Tjumlah_bus.TabIndex = 141
         '
         'Label19
         '
@@ -451,12 +459,13 @@ Partial Class FPemesanan
         Me.Label19.TabIndex = 140
         Me.Label19.Text = "Jumlah Bus"
         '
-        'TextBox11
+        'Tharga
         '
-        Me.TextBox11.Location = New System.Drawing.Point(126, 99)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox11.TabIndex = 139
+        Me.Tharga.Location = New System.Drawing.Point(126, 99)
+        Me.Tharga.Name = "Tharga"
+        Me.Tharga.ReadOnly = True
+        Me.Tharga.Size = New System.Drawing.Size(129, 20)
+        Me.Tharga.TabIndex = 139
         '
         'Label20
         '
@@ -469,12 +478,13 @@ Partial Class FPemesanan
         Me.Label20.TabIndex = 138
         Me.Label20.Text = "Harga"
         '
-        'TextBox12
+        'Tkelas
         '
-        Me.TextBox12.Location = New System.Drawing.Point(126, 73)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox12.TabIndex = 137
+        Me.Tkelas.Location = New System.Drawing.Point(126, 73)
+        Me.Tkelas.Name = "Tkelas"
+        Me.Tkelas.ReadOnly = True
+        Me.Tkelas.Size = New System.Drawing.Size(129, 20)
+        Me.Tkelas.TabIndex = 137
         '
         'Label21
         '
@@ -487,12 +497,13 @@ Partial Class FPemesanan
         Me.Label21.TabIndex = 136
         Me.Label21.Text = "Kelas"
         '
-        'TextBox13
+        'Tjurusan
         '
-        Me.TextBox13.Location = New System.Drawing.Point(126, 47)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox13.TabIndex = 135
+        Me.Tjurusan.Location = New System.Drawing.Point(126, 47)
+        Me.Tjurusan.Name = "Tjurusan"
+        Me.Tjurusan.ReadOnly = True
+        Me.Tjurusan.Size = New System.Drawing.Size(129, 20)
+        Me.Tjurusan.TabIndex = 135
         '
         'Label22
         '
@@ -505,12 +516,12 @@ Partial Class FPemesanan
         Me.Label22.TabIndex = 134
         Me.Label22.Text = "Jurusan"
         '
-        'TextBox14
+        'Tsisa
         '
-        Me.TextBox14.Location = New System.Drawing.Point(704, 19)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox14.TabIndex = 151
+        Me.Tsisa.Location = New System.Drawing.Point(704, 19)
+        Me.Tsisa.Name = "Tsisa"
+        Me.Tsisa.Size = New System.Drawing.Size(129, 20)
+        Me.Tsisa.TabIndex = 151
         '
         'Label23
         '
@@ -523,12 +534,12 @@ Partial Class FPemesanan
         Me.Label23.TabIndex = 150
         Me.Label23.Text = "Sisa"
         '
-        'TextBox15
+        'Tdibayar
         '
-        Me.TextBox15.Location = New System.Drawing.Point(435, 19)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox15.TabIndex = 149
+        Me.Tdibayar.Location = New System.Drawing.Point(435, 19)
+        Me.Tdibayar.Name = "Tdibayar"
+        Me.Tdibayar.Size = New System.Drawing.Size(129, 20)
+        Me.Tdibayar.TabIndex = 149
         '
         'Label24
         '
@@ -541,12 +552,12 @@ Partial Class FPemesanan
         Me.Label24.TabIndex = 148
         Me.Label24.Text = "Jumlah Bayar"
         '
-        'TextBox16
+        'Ttotal_bayar
         '
-        Me.TextBox16.Location = New System.Drawing.Point(128, 19)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox16.TabIndex = 147
+        Me.Ttotal_bayar.Location = New System.Drawing.Point(128, 19)
+        Me.Ttotal_bayar.Name = "Ttotal_bayar"
+        Me.Ttotal_bayar.Size = New System.Drawing.Size(129, 20)
+        Me.Ttotal_bayar.TabIndex = 147
         '
         'Label25
         '
@@ -559,12 +570,12 @@ Partial Class FPemesanan
         Me.Label25.TabIndex = 146
         Me.Label25.Text = "Total Bayar"
         '
-        'TextBox17
+        'Tno_bangku
         '
-        Me.TextBox17.Location = New System.Drawing.Point(126, 151)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(129, 20)
-        Me.TextBox17.TabIndex = 145
+        Me.Tno_bangku.Location = New System.Drawing.Point(126, 151)
+        Me.Tno_bangku.Name = "Tno_bangku"
+        Me.Tno_bangku.Size = New System.Drawing.Size(129, 20)
+        Me.Tno_bangku.TabIndex = 145
         '
         'Label26
         '
@@ -577,12 +588,12 @@ Partial Class FPemesanan
         Me.Label26.TabIndex = 144
         Me.Label26.Text = "No. Bangku"
         '
-        'TextBox18
+        'Tnm_pembeli
         '
-        Me.TextBox18.Location = New System.Drawing.Point(128, 19)
-        Me.TextBox18.Name = "TextBox18"
-        Me.TextBox18.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox18.TabIndex = 153
+        Me.Tnm_pembeli.Location = New System.Drawing.Point(128, 19)
+        Me.Tnm_pembeli.Name = "Tnm_pembeli"
+        Me.Tnm_pembeli.Size = New System.Drawing.Size(161, 20)
+        Me.Tnm_pembeli.TabIndex = 153
         '
         'Label27
         '
@@ -597,15 +608,15 @@ Partial Class FPemesanan
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker3)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox18)
+        Me.GroupBox1.Controls.Add(Me.Tjam_berangkat)
+        Me.GroupBox1.Controls.Add(Me.Ttelpon)
+        Me.GroupBox1.Controls.Add(Me.Tnm_pembeli)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label27)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox1.Controls.Add(Me.Ttgl_berangkat)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Ttgl_transaksi)
         Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(12, 92)
@@ -615,29 +626,29 @@ Partial Class FPemesanan
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Data Penumpang"
         '
-        'DateTimePicker3
+        'Tjam_berangkat
         '
-        Me.DateTimePicker3.CustomFormat = "H:m"
-        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(129, 125)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(161, 20)
-        Me.DateTimePicker3.TabIndex = 154
+        Me.Tjam_berangkat.CustomFormat = "H:m"
+        Me.Tjam_berangkat.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Tjam_berangkat.Location = New System.Drawing.Point(129, 125)
+        Me.Tjam_berangkat.Name = "Tjam_berangkat"
+        Me.Tjam_berangkat.Size = New System.Drawing.Size(161, 20)
+        Me.Tjam_berangkat.TabIndex = 154
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
+        Me.GroupBox2.Controls.Add(Me.Twarna)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.Tno_polisi)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.Tjenis)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.Tmerk)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.Tbahan_bakar)
+        Me.GroupBox2.Controls.Add(Me.Ckode_mobil)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(601, 92)
         Me.GroupBox2.Name = "GroupBox2"
@@ -648,20 +659,20 @@ Partial Class FPemesanan
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.ComboBox2)
+        Me.GroupBox3.Controls.Add(Me.Ckode_tiket)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Controls.Add(Me.TextBox13)
+        Me.GroupBox3.Controls.Add(Me.Tjurusan)
         Me.GroupBox3.Controls.Add(Me.Label21)
-        Me.GroupBox3.Controls.Add(Me.TextBox12)
+        Me.GroupBox3.Controls.Add(Me.Tkelas)
         Me.GroupBox3.Controls.Add(Me.Label20)
-        Me.GroupBox3.Controls.Add(Me.TextBox11)
+        Me.GroupBox3.Controls.Add(Me.Tharga)
         Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Controls.Add(Me.TextBox9)
-        Me.GroupBox3.Controls.Add(Me.TextBox17)
+        Me.GroupBox3.Controls.Add(Me.Tjumlah_beli)
+        Me.GroupBox3.Controls.Add(Me.Tno_bangku)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.Label26)
-        Me.GroupBox3.Controls.Add(Me.TextBox10)
+        Me.GroupBox3.Controls.Add(Me.Tjumlah_bus)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(320, 92)
         Me.GroupBox3.Name = "GroupBox3"
@@ -673,10 +684,10 @@ Partial Class FPemesanan
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Label25)
-        Me.GroupBox4.Controls.Add(Me.TextBox16)
+        Me.GroupBox4.Controls.Add(Me.Ttotal_bayar)
         Me.GroupBox4.Controls.Add(Me.Label24)
-        Me.GroupBox4.Controls.Add(Me.TextBox15)
-        Me.GroupBox4.Controls.Add(Me.TextBox14)
+        Me.GroupBox4.Controls.Add(Me.Tdibayar)
+        Me.GroupBox4.Controls.Add(Me.Tsisa)
         Me.GroupBox4.Controls.Add(Me.Label23)
         Me.GroupBox4.ForeColor = System.Drawing.Color.White
         Me.GroupBox4.Location = New System.Drawing.Point(12, 308)
@@ -697,16 +708,16 @@ Partial Class FPemesanan
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Tcari)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DGdomain)
         Me.Controls.Add(Me.Btutup)
         Me.Controls.Add(Me.Bbatal)
         Me.Controls.Add(Me.Bsimpan)
-        Me.Controls.Add(Me.Tnm_domain)
+        Me.Controls.Add(Me.Tnama_kasir)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Tkd_domain)
+        Me.Controls.Add(Me.Tkode_pemesanan)
         Me.Controls.Add(Me.Label4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FPemesanan"
@@ -725,62 +736,62 @@ Partial Class FPemesanan
 
     End Sub
 
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Tjenis As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Ttelpon As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Tno_polisi As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tcari As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents DGdomain As DataGridView
     Friend WithEvents Btutup As Button
     Friend WithEvents Bbatal As Button
     Friend WithEvents Bsimpan As Button
-    Friend WithEvents Tnm_domain As TextBox
+    Friend WithEvents Tnama_kasir As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Tkd_domain As TextBox
+    Friend WithEvents Tkode_pemesanan As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Tbahan_bakar As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Twarna As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Tmerk As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Ckode_mobil As ComboBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Ttgl_transaksi As DateTimePicker
+    Friend WithEvents Ttgl_berangkat As DateTimePicker
+    Friend WithEvents Ckode_tiket As ComboBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Tjumlah_beli As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Tjumlah_bus As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents Tharga As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents Tkelas As TextBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents Tjurusan As TextBox
     Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Tsisa As TextBox
     Friend WithEvents Label23 As Label
-    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents Tdibayar As TextBox
     Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents Ttotal_bayar As TextBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents Tno_bangku As TextBox
     Friend WithEvents Label26 As Label
-    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents Tnm_pembeli As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents DateTimePicker3 As DateTimePicker
+    Friend WithEvents Tjam_berangkat As DateTimePicker
 End Class

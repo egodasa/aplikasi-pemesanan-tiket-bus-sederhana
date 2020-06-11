@@ -1,5 +1,8 @@
 ﻿Public Class FPemesanan
-    Private Sub GenerateKodePemesanan()
+    Private Function GenerateKodePemesanan()
+        Return 0
+    End Function
+    Private Sub SetKodePemesanan()
 
     End Sub
     Private Sub TampilDetailLogin()

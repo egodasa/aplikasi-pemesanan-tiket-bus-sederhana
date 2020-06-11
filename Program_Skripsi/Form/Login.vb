@@ -1,5 +1,6 @@
 ﻿Public Class Aplikasi
     Public Db As New Db()
+    Public id_pengguna As String
     Public level As String
     Public nama_lengkap As String
     Public username As String
@@ -33,6 +34,7 @@
             Me.username = username
             Me.level = cek_login.Rows(0).Item("level")
             Me.nama_lengkap = cek_login.Rows(0).Item("nama_lengkap")
+            Me.id_pengguna = cek_login.Rows(0).Item("id_pengguna")
             MessageBox.Show("Selamat datang, " & username, "Pesan")
             Me.Hide()
             FMenu_Utama.Show()
