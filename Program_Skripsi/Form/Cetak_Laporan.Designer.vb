@@ -110,7 +110,7 @@ Partial Class Cetak_Laporan
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents WBcetak As WebBrowser
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents WBcetak As WebBrowser
 End Class

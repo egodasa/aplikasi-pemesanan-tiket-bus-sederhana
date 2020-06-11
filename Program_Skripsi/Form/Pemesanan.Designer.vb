@@ -34,7 +34,7 @@ Partial Class FPemesanan
         Me.Tcari = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DGdomain = New System.Windows.Forms.DataGridView()
+        Me.DGpemesanan = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bsimpan = New System.Windows.Forms.Button()
@@ -81,7 +81,7 @@ Partial Class FPemesanan
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGpemesanan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -196,16 +196,16 @@ Partial Class FPemesanan
         Me.Label3.Text = "_________________________________________________________________________________" &
     "____________"
         '
-        'DGdomain
+        'DGpemesanan
         '
-        Me.DGdomain.AllowUserToAddRows = False
-        Me.DGdomain.AllowUserToDeleteRows = False
-        Me.DGdomain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGdomain.Location = New System.Drawing.Point(21, 439)
-        Me.DGdomain.Name = "DGdomain"
-        Me.DGdomain.ReadOnly = True
-        Me.DGdomain.Size = New System.Drawing.Size(845, 128)
-        Me.DGdomain.TabIndex = 103
+        Me.DGpemesanan.AllowUserToAddRows = False
+        Me.DGpemesanan.AllowUserToDeleteRows = False
+        Me.DGpemesanan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGpemesanan.Location = New System.Drawing.Point(21, 439)
+        Me.DGpemesanan.Name = "DGpemesanan"
+        Me.DGpemesanan.ReadOnly = True
+        Me.DGpemesanan.Size = New System.Drawing.Size(845, 128)
+        Me.DGpemesanan.TabIndex = 103
         '
         'Btutup
         '
@@ -520,6 +520,7 @@ Partial Class FPemesanan
         '
         Me.Tsisa.Location = New System.Drawing.Point(704, 19)
         Me.Tsisa.Name = "Tsisa"
+        Me.Tsisa.ReadOnly = True
         Me.Tsisa.Size = New System.Drawing.Size(129, 20)
         Me.Tsisa.TabIndex = 151
         '
@@ -556,6 +557,7 @@ Partial Class FPemesanan
         '
         Me.Ttotal_bayar.Location = New System.Drawing.Point(128, 19)
         Me.Ttotal_bayar.Name = "Ttotal_bayar"
+        Me.Ttotal_bayar.ReadOnly = True
         Me.Ttotal_bayar.Size = New System.Drawing.Size(129, 20)
         Me.Ttotal_bayar.TabIndex = 147
         '
@@ -711,7 +713,7 @@ Partial Class FPemesanan
         Me.Controls.Add(Me.Tcari)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.DGdomain)
+        Me.Controls.Add(Me.DGpemesanan)
         Me.Controls.Add(Me.Btutup)
         Me.Controls.Add(Me.Bbatal)
         Me.Controls.Add(Me.Bsimpan)
@@ -722,7 +724,7 @@ Partial Class FPemesanan
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FPemesanan"
         Me.Text = "Pemesanan"
-        CType(Me.DGdomain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGpemesanan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -747,7 +749,7 @@ Partial Class FPemesanan
     Friend WithEvents Tcari As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DGdomain As DataGridView
+    Friend WithEvents DGpemesanan As DataGridView
     Friend WithEvents Btutup As Button
     Friend WithEvents Bbatal As Button
     Friend WithEvents Bsimpan As Button
