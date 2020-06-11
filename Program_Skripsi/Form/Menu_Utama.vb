@@ -4,8 +4,54 @@
         Me.Close()
     End Sub
 
-    Private Sub Init(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ResetMenu()
+        Bbus.Enabled = True
+        Btiket.Enabled = True
+        Bpemesanan.Enabled = True
+        Bpengguna.Enabled = True
+        Blaporan_mobil.Enabled = True
+        Blaporan_pemesanan.Enabled = True
+        Blaporan_tiket.Enabled = True
+    End Sub
 
+    Private Sub MenuAdmin()
+        Bbus.Enabled = True
+        Btiket.Enabled = True
+        Bpemesanan.Enabled = True
+        Bpengguna.Enabled = True
+        Blaporan_mobil.Enabled = True
+        Blaporan_pemesanan.Enabled = True
+        Blaporan_tiket.Enabled = True
+    End Sub
+
+    Private Sub MenuKasir()
+        Bbus.Enabled = False
+        Btiket.Enabled = False
+        Bpemesanan.Enabled = True
+        Bpengguna.Enabled = False
+        Blaporan_mobil.Enabled = False
+        Blaporan_pemesanan.Enabled = False
+        Blaporan_tiket.Enabled = False
+    End Sub
+
+    Private Sub MenuPimpinan()
+        Bbus.Enabled = False
+        Btiket.Enabled = False
+        Bpemesanan.Enabled = False
+        Bpengguna.Enabled = False
+        Blaporan_mobil.Enabled = True
+        Blaporan_pemesanan.Enabled = True
+        Blaporan_tiket.Enabled = True
+    End Sub
+
+    Private Sub Init(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Aplikasi.level = "Admin" Then
+            MenuAdmin()
+        ElseIf Aplikasi.level = "Kasir" Then
+            MenuKasir()
+        ElseIf Aplikasi.level = "Pimpinan" Then
+            MenuPimpinan()
+        End If
     End Sub
 
     Private Sub HasilAnalisa(sender As Object, e As EventArgs)

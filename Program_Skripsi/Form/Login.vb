@@ -1,6 +1,7 @@
 ﻿Public Class Aplikasi
     Public Db As New Db()
     Public level As String
+    Public nama_lengkap As String
     Public username As String
     Public url_laporan As String = "http://localhost/laporan_program_cobit/"
     Public Sub TutupForm(ByVal form As Form)
@@ -21,7 +22,7 @@
         Dim username As String = Tusername.Text
         Dim password As String = Tpassword.Text
         Dim cek_login As New DataTable
-        cek_login = Db.JalankanDanAmbilData("SELECT * FROM tbl_user WHERE username = '" & username & "' AND password = md5('" & password & "')")
+        cek_login = Db.JalankanDanAmbilData("SELECT * FROM tb_pengguna WHERE username = '" & username & "' AND password = md5('" & password & "')")
         If Db.ApakahError Then
             MessageBox.Show("Error : " & Db.AmbilPesanError)
             Return
@@ -30,6 +31,8 @@
             MessageBox.Show("Username atau password salah!", "Peringatan")
         Else
             Me.username = username
+            Me.level = cek_login.Rows(0).Item("level")
+            Me.nama_lengkap = cek_login.Rows(0).Item("nama_lengkap")
             MessageBox.Show("Selamat datang, " & username, "Pesan")
             Me.Hide()
             FMenu_Utama.Show()
@@ -48,16 +51,8 @@
         Return no_nota
     End Function
 
-    Private Sub Aplikasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Init(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        IsiKuisioner.Show()
-        Me.Hide()
-    End Sub
 End Class
