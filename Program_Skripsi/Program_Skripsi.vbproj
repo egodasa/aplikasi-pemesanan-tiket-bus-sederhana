@@ -181,6 +181,9 @@
     <Content Include="bus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Database\db_bus.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Database\db_bus.sql" />
     <Content Include="keluar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

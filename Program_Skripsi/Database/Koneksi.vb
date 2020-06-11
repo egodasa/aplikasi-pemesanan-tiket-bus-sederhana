@@ -1,7 +1,7 @@
-Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
 Public Class Db
     Private ReadOnly url_koneksi As String = "server=localhost;user=root;database=db_bus;port=3306;password=mysql;"
-    Private koneksi As New MySqlConnection
+    Private koneksi As New OleDbConnection
     Private is_error As Boolean ' jika ada koneksi atau proses query error, maka nilai is error akan bernilai false
     Private pesan_error As String = Nothing ' semua pesan error akan dimasukkan ke variabel ini
     ' jika koneksi berhasil, maka method ini menghasilkan nilai true
@@ -23,7 +23,7 @@ Public Class Db
     Public Function BuatKoneksi()
         ResetError()
         ' Informasi yang digunakan untuk terhubung ke database
-        koneksi = New MySqlConnection(url_koneksi) ' variabel yang menampung koneksi ke database
+        koneksi = New OleDbConnection(url_koneksi) ' variabel yang menampung koneksi ke database
         If koneksi.State = ConnectionState.Closed Then
             Try
                 Console.WriteLine("Mencoba terhubung ke database")
@@ -46,9 +46,9 @@ Public Class Db
     Public Function JalankanSql(ByVal sql As String) ' fungsi untuk menjalankan query sql. hanya menjalankan saja
         ResetError()
         If BuatKoneksi() Then
-            Dim cmd As New MySqlCommand
+            Dim cmd As New OleDbCommand
             Try
-                cmd = New MySqlCommand(sql, koneksi)
+                cmd = New OleDbCommand(sql, koneksi)
                 cmd.Connection = koneksi
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = sql
@@ -67,7 +67,7 @@ Public Class Db
         ResetError()
         If BuatKoneksi() Then
             Try
-                Dim da = New MySqlDataAdapter(sql, koneksi)
+                Dim da = New OleDbDataAdapter(sql, koneksi)
                 Dim ds = New DataSet
                 da.Fill(ds)
                 TutupKoneksi()
