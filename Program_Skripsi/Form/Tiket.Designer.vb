@@ -23,7 +23,6 @@ Partial Class FTiket
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTiket))
-        Me.DGtiket = New System.Windows.Forms.DataGridView()
         Me.Btutup = New System.Windows.Forms.Button()
         Me.Bbatal = New System.Windows.Forms.Button()
         Me.Bhapus = New System.Windows.Forms.Button()
@@ -46,19 +45,9 @@ Partial Class FTiket
         Me.Tjumlah_bus = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.DGtiket = New System.Windows.Forms.DataGridView()
         CType(Me.DGtiket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DGtiket
-        '
-        Me.DGtiket.AllowUserToAddRows = False
-        Me.DGtiket.AllowUserToDeleteRows = False
-        Me.DGtiket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGtiket.Location = New System.Drawing.Point(19, 89)
-        Me.DGtiket.Name = "DGtiket"
-        Me.DGtiket.ReadOnly = True
-        Me.DGtiket.Size = New System.Drawing.Size(529, 157)
-        Me.DGtiket.TabIndex = 46
         '
         'Btutup
         '
@@ -286,12 +275,21 @@ Partial Class FTiket
         Me.Label10.TabIndex = 71
         Me.Label10.Text = "___________________________________________________________"
         '
+        'DGtiket
+        '
+        Me.DGtiket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGtiket.Location = New System.Drawing.Point(20, 89)
+        Me.DGtiket.Name = "DGtiket"
+        Me.DGtiket.Size = New System.Drawing.Size(528, 150)
+        Me.DGtiket.TabIndex = 72
+        '
         'FTiket
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(563, 425)
+        Me.Controls.Add(Me.DGtiket)
         Me.Controls.Add(Me.Tjumlah_tiket)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Tjumlah_bus)
@@ -305,7 +303,6 @@ Partial Class FTiket
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Bedit)
-        Me.Controls.Add(Me.DGtiket)
         Me.Controls.Add(Me.Btutup)
         Me.Controls.Add(Me.Bbatal)
         Me.Controls.Add(Me.Bhapus)
@@ -324,7 +321,6 @@ Partial Class FTiket
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DGtiket As DataGridView
     Friend WithEvents Btutup As Button
     Friend WithEvents Bbatal As Button
     Friend WithEvents Bhapus As Button
@@ -347,4 +343,5 @@ Partial Class FTiket
     Friend WithEvents Tjumlah_bus As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents DGtiket As DataGridView
 End Class

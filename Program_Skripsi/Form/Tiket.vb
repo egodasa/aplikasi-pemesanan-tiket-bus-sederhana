@@ -38,7 +38,7 @@
         Else Return True
         End If
     End Function
-    Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs) Handles DGtiket.CellContentDoubleClick
+    Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs)
         Dim data_terpilih As DataGridViewRow = DGtiket.CurrentRow
         Tkode_tiket.Text = data_terpilih.Cells("kode_tiket").Value
         Tjurusan.Text = data_terpilih.Cells("jurusan").Value
@@ -55,7 +55,7 @@
             Tkode_tiket.Clear()
             Return
         End If
-        Aplikasi.Db.JalankanSql("INSERT INTO tb_tiket VALUES ('" & kode_tiket & "', '" & jurusan & "', '" & jumlah_bus & "', '" & kelas & "', '" & harga & "', '" & jumlah_tiket & "')")
+        Aplikasi.Db.JalankanSql("INSERT INTO tb_tiket VALUES ('" & kode_tiket & "', '" & jurusan & "', " & jumlah_bus & ", '" & kelas & "', " & harga & ", " & jumlah_tiket & ")")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else
@@ -66,7 +66,7 @@
     End Sub
     Private Sub ProsesEditData(sender As Object, e As EventArgs) Handles Bedit.Click
         Me.AturData()
-        Aplikasi.Db.JalankanSql("UPDATE tb_tiket SET jurusan = '" & jurusan & "', jumlah_bus = '" & jumlah_bus & "',kelas = '" & kelas & "', harga = '" & harga & "',jumlah_tiket = '" & jumlah_tiket & "' WHERE kode_tiket = '" & kode_tiket & "'")
+        Aplikasi.Db.JalankanSql("UPDATE tb_tiket SET jurusan = '" & jurusan & "', jumlah_bus = " & jumlah_bus & ",kelas = '" & kelas & "', harga = " & harga & ",jumlah_tiket = " & jumlah_tiket & " WHERE kode_tiket = '" & kode_tiket & "'")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else
