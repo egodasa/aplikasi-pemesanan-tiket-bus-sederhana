@@ -35,7 +35,7 @@ Partial Class FTiket
         Me.Bedit = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tcari = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Tharga = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -187,12 +187,12 @@ Partial Class FTiket
         Me.Label3.TabIndex = 60
         Me.Label3.Text = "___________________________________________________________"
         '
-        'TextBox1
+        'Tcari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(123, 63)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(425, 20)
-        Me.TextBox1.TabIndex = 61
+        Me.Tcari.Location = New System.Drawing.Point(123, 63)
+        Me.Tcari.Name = "Tcari"
+        Me.Tcari.Size = New System.Drawing.Size(425, 20)
+        Me.Tcari.TabIndex = 61
         '
         'Label2
         '
@@ -301,7 +301,7 @@ Partial Class FTiket
         Me.Controls.Add(Me.Tkelas)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Tcari)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Bedit)
@@ -336,7 +336,7 @@ Partial Class FTiket
     Friend WithEvents Bedit As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tcari As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Tharga As TextBox
     Friend WithEvents Label6 As Label

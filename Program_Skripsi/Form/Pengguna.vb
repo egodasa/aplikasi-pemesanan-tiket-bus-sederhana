@@ -2,23 +2,23 @@
     Dim username As String
     Dim password As String
     Dim nama_lengkap As String
-    Dim level As String
+    Dim jenis_level As String
     Dim id_pengguna As String
     Private Sub AturData()
         username = Tusername.Text
         password = Tpassword.Text
         nama_lengkap = Tnama_lengkap.Text
-        level = Clevel.Text
+        jenis_level = Cjenis_level.Text
     End Sub
     Private Sub ResetForm(sender As Object, e As EventArgs) Handles Bbatal.Click
         Tusername.Clear()
         Tpassword.Clear()
         Tnama_lengkap.Clear()
-        Clevel.SelectedIndex = -1
+        Cjenis_level.SelectedIndex = -1
     End Sub
 
     Private Sub TampilkanData(Optional ByVal kata_kunci As String = "")
-        DGpengguna.DataSource = Aplikasi.Db.JalankanDanAmbilData("SELECT id_pengguna, username, nama_lengkap, level FROM tb_pengguna")
+        DGpengguna.DataSource = Aplikasi.Db.JalankanDanAmbilData("SELECT id_pengguna, [username], nama_lengkap, jenis_level FROM tb_pengguna")
         If Aplikasi.Db.ApakahError Then
             MessageBox.Show(Aplikasi.Db.AmbilPesanError)
         End If
@@ -29,11 +29,11 @@
         id_pengguna = data_terpilih.Cells("id_pengguna").Value
         Tusername.Text = data_terpilih.Cells("username").Value
         Tnama_lengkap.Text = data_terpilih.Cells("nama_lengkap").Value
-        Clevel.Text = data_terpilih.Cells("level").Value
+        Cjenis_level.Text = data_terpilih.Cells("jenis_level").Value
     End Sub
     Private Sub ProsesTambahData(sender As Object, e As EventArgs) Handles Bsimpan.Click
         Me.AturData()
-        Aplikasi.Db.JalankanSql("INSERT INTO tb_pengguna (username, password, nama_lengkap, level) VALUES ('" & username & "', '" & password & "', '" & nama_lengkap & "', '" & level & "')")
+        Aplikasi.Db.JalankanSql("INSERT INTO tb_pengguna (username, [password], nama_lengkap, jenis_level) VALUES ('" & username & "', '" & password & "', '" & nama_lengkap & "', '" & jenis_level & "')")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else
@@ -45,9 +45,9 @@
     Private Sub ProsesEditData(sender As Object, e As EventArgs) Handles Bedit.Click
         Me.AturData()
         If password <> "" Then
-            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', password = '" & password & "', nama_lengkap = '" & nama_lengkap & "', level = '" & level & "' WHERE id_pengguna = '" & id_pengguna & "'")
+            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', [password] = '" & password & "', nama_lengkap = '" & nama_lengkap & "', jenis_level = '" & jenis_level & "' WHERE id_pengguna = " & id_pengguna)
         Else
-            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', nama_lengkap = '" & nama_lengkap & "', level = '" & level & "' WHERE id_pengguna = '" & id_pengguna & "'")
+            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', nama_lengkap = '" & nama_lengkap & "', jenis_level = '" & jenis_level & "' WHERE id_pengguna = " & id_pengguna & "")
         End If
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
@@ -59,7 +59,7 @@
     End Sub
     Private Sub ProsesHapusData(sender As Object, e As EventArgs) Handles Bhapus.Click
         Dim kode = DGpengguna.CurrentRow.Cells("id_pengguna").Value
-        Aplikasi.Db.JalankanSql("DELETE FROM tb_pengguna WHERE id_pengguna = '" & kode & "'")
+        Aplikasi.Db.JalankanSql("DELETE FROM tb_pengguna WHERE id_pengguna = " & kode & "")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else

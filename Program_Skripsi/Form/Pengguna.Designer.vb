@@ -37,7 +37,7 @@ Partial Class FPengguna
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Clevel = New System.Windows.Forms.ComboBox()
+        Me.Cjenis_level = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DGpengguna, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -200,14 +200,14 @@ Partial Class FPengguna
         Me.Label4.TabIndex = 58
         Me.Label4.Text = "________________________________________"
         '
-        'Clevel
+        'Cjenis_level
         '
-        Me.Clevel.FormattingEnabled = True
-        Me.Clevel.Items.AddRange(New Object() {"Admin", "Kasir", "Pimpinan"})
-        Me.Clevel.Location = New System.Drawing.Point(119, 137)
-        Me.Clevel.Name = "Clevel"
-        Me.Clevel.Size = New System.Drawing.Size(256, 21)
-        Me.Clevel.TabIndex = 59
+        Me.Cjenis_level.FormattingEnabled = True
+        Me.Cjenis_level.Items.AddRange(New Object() {"Admin", "Kasir", "Pimpinan"})
+        Me.Cjenis_level.Location = New System.Drawing.Point(119, 137)
+        Me.Cjenis_level.Name = "Cjenis_level"
+        Me.Cjenis_level.Size = New System.Drawing.Size(256, 21)
+        Me.Cjenis_level.TabIndex = 59
         '
         'Label6
         '
@@ -227,7 +227,7 @@ Partial Class FPengguna
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(391, 396)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Clevel)
+        Me.Controls.Add(Me.Cjenis_level)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Tnama_lengkap)
@@ -264,6 +264,6 @@ Partial Class FPengguna
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Clevel As ComboBox
+    Friend WithEvents Cjenis_level As ComboBox
     Friend WithEvents Label6 As Label
 End Class

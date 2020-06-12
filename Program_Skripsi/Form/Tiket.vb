@@ -92,4 +92,8 @@
         Bbatal.PerformClick()
         TampilkanData()
     End Sub
+
+    Private Sub EventPencarian(sender As Object, e As KeyEventArgs) Handles Tcari.KeyUp
+        TampilkanData(Tcari.Text)
+    End Sub
 End Class

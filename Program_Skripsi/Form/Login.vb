@@ -32,7 +32,7 @@
             MessageBox.Show("Username atau password salah!", "Peringatan")
         Else
             Me.username = username
-            Me.level = cek_login.Rows(0).Item("level")
+            Me.level = cek_login.Rows(0).Item("jenis_level")
             Me.nama_lengkap = cek_login.Rows(0).Item("nama_lengkap")
             Me.id_pengguna = cek_login.Rows(0).Item("id_pengguna")
             MessageBox.Show("Selamat datang, " & username, "Pesan")
@@ -44,17 +44,23 @@
 
     Public Function GenerateKode(ByVal tabel As String, ByVal kolom As String, ByVal prefix As String)
         Dim no_nota As String
-        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT CONCAT('" & prefix & "', LPAD((right(" & kolom & ", 6) + 1), 6, '0')) AS kode FROM `" & tabel & "` ORDER BY `" & kolom & "` DESC LIMIT 1")
-        If nomor.Rows.Count = 0 Then
-            no_nota = prefix & "000001"
+        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT '" & prefix & "' & RIGHT('000000'," & kolom & ", 6) AS [kode] FROM " & tabel & " ORDER BY " & kolom & " DESC LIMIT 1")
+        MessageBox.Show("SELECT RIGHT('000000'," & kolom & ", 6) AS [kode] FROM " & tabel & " ORDER BY " & kolom & " DESC LIMIT 1")
+        If Db.ApakahError Then
+            MessageBox.Show(Db.AmbilPesanError)
+            Return ""
         Else
-            no_nota = nomor.Rows(0).Item("kode")
+            If nomor.Rows.Count = 0 Then
+                no_nota = prefix & "000001"
+            Else
+                no_nota = nomor.Rows(0).Item("kode")
+            End If
+            Return no_nota
         End If
-        Return no_nota
+
     End Function
 
     Private Sub Init(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 
 End Class
