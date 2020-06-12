@@ -44,8 +44,7 @@
 
     Public Function GenerateKode(ByVal tabel As String, ByVal kolom As String, ByVal prefix As String)
         Dim no_nota As String
-        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT '" & prefix & "' & RIGHT('000000'," & kolom & ", 6) AS [kode] FROM " & tabel & " ORDER BY " & kolom & " DESC LIMIT 1")
-        MessageBox.Show("SELECT RIGHT('000000'," & kolom & ", 6) AS [kode] FROM " & tabel & " ORDER BY " & kolom & " DESC LIMIT 1")
+        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT TOP 1 " & kolom & " AS kode FROM " & tabel & " ORDER BY " & kolom & " DESC")
         If Db.ApakahError Then
             MessageBox.Show(Db.AmbilPesanError)
             Return ""
@@ -53,14 +52,15 @@
             If nomor.Rows.Count = 0 Then
                 no_nota = prefix & "000001"
             Else
-                no_nota = nomor.Rows(0).Item("kode")
+                Dim no_nota_tmp As Integer = Val(nomor.Rows(0).Item("kode").ToString().Substring(6)) + 1
+                no_nota = prefix & no_nota_tmp.ToString.PadLeft(6, "0")
             End If
             Return no_nota
         End If
 
     End Function
 
-    Private Sub Init(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Aplikasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Tusername.Text = GenerateKode("tb_mobil", "kode_mobil", "M")
     End Sub
-
 End Class

@@ -14,7 +14,7 @@
         jumlah_tiket = Tjumlah_tiket.Text
     End Sub
     Private Sub ResetForm(sender As Object, e As EventArgs) Handles Bbatal.Click
-        Tkode_tiket.Clear()
+        Tkode_tiket.Text = Aplikasi.GenerateKode("tb_tiket", "kode_tiket", "TKT")
         Tjurusan.Clear()
         Tjumlah_tiket.Clear()
         Tjumlah_bus.Clear()
