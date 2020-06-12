@@ -23,7 +23,7 @@
         Dim username As String = Tusername.Text
         Dim password As String = Tpassword.Text
         Dim cek_login As New DataTable
-        cek_login = Db.JalankanDanAmbilData("SELECT * FROM tb_pengguna WHERE username = '" & username & "' AND password = md5('" & password & "')")
+        cek_login = Db.JalankanDanAmbilData("SELECT * FROM tb_pengguna WHERE username = '" & username & "' AND password = '" & password & "'")
         If Db.ApakahError Then
             MessageBox.Show("Error : " & Db.AmbilPesanError)
             Return

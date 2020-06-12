@@ -1,6 +1,6 @@
 Imports System.Data.OleDb
 Public Class Db
-    Private ReadOnly url_koneksi As String = "server=localhost;user=root;database=db_bus;port=3306;password=mysql;"
+    Private ReadOnly url_koneksi As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database\db_bus.accdb"
     Private koneksi As New OleDbConnection
     Private is_error As Boolean ' jika ada koneksi atau proses query error, maka nilai is error akan bernilai false
     Private pesan_error As String = Nothing ' semua pesan error akan dimasukkan ke variabel ini

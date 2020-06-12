@@ -19,6 +19,9 @@
 
     Private Sub TampilkanData(Optional ByVal kata_kunci As String = "")
         DGpengguna.DataSource = Aplikasi.Db.JalankanDanAmbilData("SELECT id_pengguna, username, nama_lengkap, level FROM tb_pengguna")
+        If Aplikasi.Db.ApakahError Then
+            MessageBox.Show(Aplikasi.Db.AmbilPesanError)
+        End If
     End Sub
 
     Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs) Handles DGpengguna.CellContentDoubleClick
@@ -30,7 +33,7 @@
     End Sub
     Private Sub ProsesTambahData(sender As Object, e As EventArgs) Handles Bsimpan.Click
         Me.AturData()
-        Aplikasi.Db.JalankanSql("INSERT INTO tb_pengguna (username, password, nama_lengkap, level) VALUES ('" & username & "', MD5('" & password & "'), '" & nama_lengkap & "', '" & level & "')")
+        Aplikasi.Db.JalankanSql("INSERT INTO tb_pengguna (username, password, nama_lengkap, level) VALUES ('" & username & "', '" & password & "', '" & nama_lengkap & "', '" & level & "')")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else
@@ -42,7 +45,7 @@
     Private Sub ProsesEditData(sender As Object, e As EventArgs) Handles Bedit.Click
         Me.AturData()
         If password <> "" Then
-            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', password = MD5('" & password & "'), nama_lengkap = '" & nama_lengkap & "', level = '" & level & "' WHERE id_pengguna = '" & id_pengguna & "'")
+            Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', password = '" & password & "', nama_lengkap = '" & nama_lengkap & "', level = '" & level & "' WHERE id_pengguna = '" & id_pengguna & "'")
         Else
             Aplikasi.Db.JalankanSql("UPDATE tb_pengguna SET username = '" & username & "', nama_lengkap = '" & nama_lengkap & "', level = '" & level & "' WHERE id_pengguna = '" & id_pengguna & "'")
         End If

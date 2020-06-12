@@ -32,7 +32,7 @@ Partial Class FMobil
         Me.Tmerk = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Tcari = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Bedit = New System.Windows.Forms.Button()
@@ -132,12 +132,12 @@ Partial Class FMobil
         Me.Label2.TabIndex = 85
         Me.Label2.Text = "Pencarian"
         '
-        'TextBox1
+        'Tcari
         '
-        Me.TextBox1.Location = New System.Drawing.Point(116, 58)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(425, 20)
-        Me.TextBox1.TabIndex = 84
+        Me.Tcari.Location = New System.Drawing.Point(116, 58)
+        Me.Tcari.Name = "Tcari"
+        Me.Tcari.Size = New System.Drawing.Size(425, 20)
+        Me.Tcari.TabIndex = 84
         '
         'Label5
         '
@@ -304,7 +304,7 @@ Partial Class FMobil
         Me.Controls.Add(Me.Tmerk)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Tcari)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Bedit)
@@ -336,7 +336,7 @@ Partial Class FMobil
     Friend WithEvents Tmerk As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Tcari As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Bedit As Button

@@ -76,7 +76,7 @@
     End Sub
 
     Private Sub Bpengguna_Click(sender As Object, e As EventArgs) Handles Bpengguna.Click
-        FPemesanan.Show()
+        FPengguna.Show()
         Me.Hide()
     End Sub
 

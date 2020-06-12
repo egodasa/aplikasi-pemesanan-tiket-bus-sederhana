@@ -124,7 +124,8 @@
         DGpemesanan.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
     End Sub
     Private Sub LoadForm(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        TampilDataPemesanan()
+        GenerateKodePemesanan()
     End Sub
 
     Private Sub Bsimpan_Click(sender As Object, e As EventArgs) Handles Bsimpan.Click
