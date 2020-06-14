@@ -198,7 +198,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Laporan\header_laporan.php" />
+    <None Include="Laporan\header_laporan.php">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Laporan\helper.php" />
     <None Include="Laporan\koneksi.php" />
     <None Include="Laporan\laporan-mobil.php" />

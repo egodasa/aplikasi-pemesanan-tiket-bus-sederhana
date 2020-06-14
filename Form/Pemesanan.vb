@@ -21,7 +21,6 @@
         Ckode_tiket.ValueMember = "kode_tiket"
         Ckode_tiket.DisplayMember = "keterangan"
         Ckode_tiket.DataSource = data_tiket
-        
     End Sub
     Private Sub SetKodePemesanan()
         Tkode_pemesanan.Text = Aplikasi.GenerateKode("tb_pemesanan", "kode_tiket", "PJ-TKT-")
@@ -45,7 +44,7 @@
     Private Sub TampilDetailTiket()
         Dim indeks_tiket As Integer = Ckode_tiket.SelectedIndex
         If indeks_tiket >= 0 Then
-            Dim data_terpilih As DataRow = data_mobil.Rows(indeks_tiket)
+            Dim data_terpilih As DataRow = data_tiket.Rows(indeks_tiket)
             Tjurusan.Text = data_terpilih.Item("jurusan")
             Tkelas.Text = data_terpilih.Item("kelas")
             Tharga.Text = data_terpilih.Item("harga")
@@ -63,8 +62,11 @@
     End Sub
     Private Sub HitungKembalian()
         Dim kembalian As Integer
-        If Ttotal_bayar.Text <> "" And Tdibayar.Text Then
-            kembalian = Val(Ttotal_bayar.Text) - Val(Tdibayar.Text)
+        If Ttotal_bayar.Text <> "" And Tdibayar.Text <> "" Then
+            kembalian = Val(Tdibayar.Text) - Val(Ttotal_bayar.Text)
+            If kembalian < 0 Then
+                kembalian = 0
+            End If
         End If
         Tsisa.Text = kembalian
     End Sub
@@ -154,5 +156,29 @@
     Private Sub Btutup_Click(sender As Object, e As EventArgs) Handles Btutup.Click
         FMenu_Utama.Show()
         Me.Close()
+    End Sub
+
+    Private Sub EventTampilkanDetailMobil(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ckode_mobil.SelectionChangeCommitted
+        If Ckode_mobil.SelectedIndex >= 0 Then
+            TampilDetailMobil()
+        Else
+            ResetDataMobil()
+        End If
+    End Sub
+    Private Sub EventTampilkanDetailTiket(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ckode_tiket.SelectionChangeCommitted
+        If Ckode_tiket.SelectedIndex >= 0 Then
+            TampilDetailTiket()
+        Else
+            ResetDataTiket()
+        End If
+
+    End Sub
+
+    Private Sub EventHitungJumlahBayar(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Tjumlah_beli.KeyUp
+        HitungTotalBayar()
+    End Sub
+
+    Private Sub EventHitungSisa(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Tdibayar.KeyDown
+        HitungKembalian()
     End Sub
 End Class
