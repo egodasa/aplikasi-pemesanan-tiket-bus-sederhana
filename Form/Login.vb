@@ -4,7 +4,7 @@
     Public level As String
     Public nama_lengkap As String
     Public username As String
-    Public url_laporan As String = "http://localhost/laporan_program_cobit/"
+    Public url_laporan As String = Application.StartupPath & "\"
     Public Sub TutupForm(ByVal form As Form)
         FMenu_Utama.Show()
         form.Close()

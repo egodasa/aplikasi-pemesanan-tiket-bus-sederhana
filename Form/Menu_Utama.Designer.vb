@@ -41,7 +41,7 @@ Partial Class FMenu_Utama
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(510, 35)
+        Me.Label1.Size = New System.Drawing.Size(299, 35)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "PO. JASA MALINDO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

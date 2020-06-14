@@ -198,15 +198,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Laporan\header_laporan.php">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Laporan\helper.php" />
-    <None Include="Laporan\koneksi.php" />
-    <None Include="Laporan\laporan-mobil.php" />
-    <None Include="Laporan\laporan-pemesanan.php" />
-    <None Include="Laporan\laporan-tiket.php" />
-    <None Include="Laporan\style_laporan.php" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -218,22 +209,56 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bus.png" />
+    <Content Include="bus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Database\db_bus.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Database\db_bus.sql" />
     <Content Include="Database\MySql.Data.dll" />
-    <Content Include="keluar.png" />
-    <Content Include="laporan.png" />
-    <Content Include="Laporan\logo.jpg" />
-    <Content Include="logo-besar.png" />
-    <Content Include="logo.ico" />
-    <Content Include="logo.png" />
-    <Content Include="pemesanan.png" />
-    <Content Include="pengguna.png" />
-    <Content Include="tiket.png" />
-    <Content Include="user.png" />
+    <Content Include="keluar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="laporan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\laporan-mobil.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\laporan-pemesanan.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\laporan-tiket.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Laporan\style_laporan.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo-besar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pemesanan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pengguna.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tiket.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

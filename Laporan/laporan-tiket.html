@@ -7,11 +7,20 @@
 		<meta charset="UTF-8">
         <title>Laporan Data Tiket</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-		<?php include_once "style_laporan.php"; ?>
+		<link href="style_laporan.css" rel="css/stylesheet" />
 	</head>
 	<body>
-		<?php include_once "header_laporan.php"; ?>
-
+		<table style="width: 100%;">
+			<tr>
+				<td style="width: 100%;">
+					<div style="text-align: left;">
+						<h2>
+							PO. JASA MALINDO
+						</h2>
+					</div>
+				</td>
+			</tr>
+		</table>
 		<div style="text-align: center;">
 		<h3>
 		Laporan Data Tiket <br>
@@ -52,7 +61,7 @@
 
 		<div style="float: right;width: 300px;text-align: center;">
 			<?=tanggal_indo(date("Y-m-d"), true)?> <br>
-			Admin
+			Pimpinan
 			<br>
 			<br>
 			<br>

@@ -36,7 +36,7 @@ Partial Class Cetak_Laporan
         'Panel1
         '
         Me.Panel1.AutoSize = True
-        Me.Panel1.BackColor = System.Drawing.Color.Red
+        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -47,30 +47,42 @@ Partial Class Cetak_Laporan
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(802, 12)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Keluar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(108, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Cetak"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(12, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Muat Ulang"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel1
         '
@@ -89,6 +101,7 @@ Partial Class Cetak_Laporan
         Me.WBcetak.Name = "WBcetak"
         Me.WBcetak.Size = New System.Drawing.Size(887, 417)
         Me.WBcetak.TabIndex = 0
+        Me.WBcetak.Url = New System.Uri("http://xx", System.UriKind.Absolute)
         '
         'Cetak_Laporan
         '

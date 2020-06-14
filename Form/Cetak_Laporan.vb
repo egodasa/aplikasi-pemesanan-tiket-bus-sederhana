@@ -21,5 +21,6 @@
 
     Private Sub BukaForm(sender As Object, e As EventArgs) Handles MyBase.Load
         AmbilDataLaporan()
+        Console.WriteLine(url)
     End Sub
 End Class

@@ -84,4 +84,19 @@
         Aplikasi.Show()
         Me.Close()
     End Sub
+
+    Private Sub Blaporan_mobil_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_mobil.Click
+        Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-mobil.html"
+        Cetak_Laporan.ShowDialog()
+    End Sub
+
+    Private Sub Blaporan_tiket_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_tiket.Click
+        Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-tiket.html"
+        Cetak_Laporan.ShowDialog()
+    End Sub
+
+    Private Sub Blaporan_pemesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_pemesanan.Click
+        Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-pemesanan.html"
+        Cetak_Laporan.ShowDialog()
+    End Sub
 End Class
