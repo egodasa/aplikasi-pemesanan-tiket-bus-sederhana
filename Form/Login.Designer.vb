@@ -139,7 +139,7 @@ Partial Class Aplikasi
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Aplikasi"
-        Me.Text = "PT. MALINDO PRIMA TRANSPORT"
+        Me.Text = "PO. JASA MALINDO"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -43,7 +43,7 @@ Partial Class FMenu_Utama
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(510, 35)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "PT. MALINDO PRIMA TRANSPORT"
+        Me.Label1.Text = "PO. JASA MALINDO"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Bbus

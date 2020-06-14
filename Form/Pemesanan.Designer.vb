@@ -90,10 +90,10 @@ Partial Class FPemesanan
         '
         'Tjenis
         '
-        Me.Tjenis.Location = New System.Drawing.Point(115, 71)
+        Me.Tjenis.Location = New System.Drawing.Point(98, 71)
         Me.Tjenis.Name = "Tjenis"
         Me.Tjenis.ReadOnly = True
-        Me.Tjenis.Size = New System.Drawing.Size(129, 20)
+        Me.Tjenis.Size = New System.Drawing.Size(161, 20)
         Me.Tjenis.TabIndex = 116
         '
         'Label8
@@ -127,10 +127,10 @@ Partial Class FPemesanan
         '
         'Tno_polisi
         '
-        Me.Tno_polisi.Location = New System.Drawing.Point(115, 45)
+        Me.Tno_polisi.Location = New System.Drawing.Point(98, 45)
         Me.Tno_polisi.Name = "Tno_polisi"
         Me.Tno_polisi.ReadOnly = True
-        Me.Tno_polisi.Size = New System.Drawing.Size(129, 20)
+        Me.Tno_polisi.Size = New System.Drawing.Size(161, 20)
         Me.Tno_polisi.TabIndex = 112
         '
         'Label6
@@ -151,9 +151,9 @@ Partial Class FPemesanan
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(8, 19)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 17)
+        Me.Label7.Size = New System.Drawing.Size(42, 17)
         Me.Label7.TabIndex = 109
-        Me.Label7.Text = "Kode Mobil"
+        Me.Label7.Text = "Mobil"
         '
         'Label2
         '
@@ -193,8 +193,8 @@ Partial Class FPemesanan
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(850, 30)
         Me.Label3.TabIndex = 106
-        Me.Label3.Text = "_________________________________________________________________________________" &
-    "____________"
+        Me.Label3.Text = "_________________________________________________________________________________" & _
+            "____________"
         '
         'DGpemesanan
         '
@@ -254,7 +254,7 @@ Partial Class FPemesanan
         Me.Tnama_kasir.Location = New System.Drawing.Point(396, 66)
         Me.Tnama_kasir.Name = "Tnama_kasir"
         Me.Tnama_kasir.ReadOnly = True
-        Me.Tnama_kasir.Size = New System.Drawing.Size(129, 20)
+        Me.Tnama_kasir.Size = New System.Drawing.Size(193, 20)
         Me.Tnama_kasir.TabIndex = 98
         '
         'Label1
@@ -289,10 +289,10 @@ Partial Class FPemesanan
         '
         'Tbahan_bakar
         '
-        Me.Tbahan_bakar.Location = New System.Drawing.Point(115, 149)
+        Me.Tbahan_bakar.Location = New System.Drawing.Point(98, 149)
         Me.Tbahan_bakar.Name = "Tbahan_bakar"
         Me.Tbahan_bakar.ReadOnly = True
-        Me.Tbahan_bakar.Size = New System.Drawing.Size(129, 20)
+        Me.Tbahan_bakar.Size = New System.Drawing.Size(161, 20)
         Me.Tbahan_bakar.TabIndex = 123
         '
         'Label11
@@ -308,10 +308,10 @@ Partial Class FPemesanan
         '
         'Twarna
         '
-        Me.Twarna.Location = New System.Drawing.Point(115, 123)
+        Me.Twarna.Location = New System.Drawing.Point(98, 123)
         Me.Twarna.Name = "Twarna"
         Me.Twarna.ReadOnly = True
-        Me.Twarna.Size = New System.Drawing.Size(129, 20)
+        Me.Twarna.Size = New System.Drawing.Size(161, 20)
         Me.Twarna.TabIndex = 121
         '
         'Label12
@@ -327,10 +327,10 @@ Partial Class FPemesanan
         '
         'Tmerk
         '
-        Me.Tmerk.Location = New System.Drawing.Point(115, 97)
+        Me.Tmerk.Location = New System.Drawing.Point(98, 97)
         Me.Tmerk.Name = "Tmerk"
         Me.Tmerk.ReadOnly = True
-        Me.Tmerk.Size = New System.Drawing.Size(129, 20)
+        Me.Tmerk.Size = New System.Drawing.Size(161, 20)
         Me.Tmerk.TabIndex = 119
         '
         'Label13
@@ -347,9 +347,9 @@ Partial Class FPemesanan
         'Ckode_mobil
         '
         Me.Ckode_mobil.FormattingEnabled = True
-        Me.Ckode_mobil.Location = New System.Drawing.Point(115, 19)
+        Me.Ckode_mobil.Location = New System.Drawing.Point(98, 19)
         Me.Ckode_mobil.Name = "Ckode_mobil"
-        Me.Ckode_mobil.Size = New System.Drawing.Size(129, 21)
+        Me.Ckode_mobil.Size = New System.Drawing.Size(161, 21)
         Me.Ckode_mobil.TabIndex = 124
         '
         'Label14
@@ -395,9 +395,9 @@ Partial Class FPemesanan
         'Ckode_tiket
         '
         Me.Ckode_tiket.FormattingEnabled = True
-        Me.Ckode_tiket.Location = New System.Drawing.Point(126, 19)
+        Me.Ckode_tiket.Location = New System.Drawing.Point(94, 17)
         Me.Ckode_tiket.Name = "Ckode_tiket"
-        Me.Ckode_tiket.Size = New System.Drawing.Size(129, 21)
+        Me.Ckode_tiket.Size = New System.Drawing.Size(175, 21)
         Me.Ckode_tiket.TabIndex = 133
         '
         'Label16
@@ -418,15 +418,15 @@ Partial Class FPemesanan
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(9, 19)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(72, 17)
+        Me.Label17.Size = New System.Drawing.Size(37, 17)
         Me.Label17.TabIndex = 130
-        Me.Label17.Text = "Kode Tiket"
+        Me.Label17.Text = "Tiket"
         '
         'Tjumlah_beli
         '
-        Me.Tjumlah_beli.Location = New System.Drawing.Point(126, 177)
+        Me.Tjumlah_beli.Location = New System.Drawing.Point(94, 175)
         Me.Tjumlah_beli.Name = "Tjumlah_beli"
-        Me.Tjumlah_beli.Size = New System.Drawing.Size(129, 20)
+        Me.Tjumlah_beli.Size = New System.Drawing.Size(175, 20)
         Me.Tjumlah_beli.TabIndex = 143
         '
         'Label18
@@ -442,10 +442,10 @@ Partial Class FPemesanan
         '
         'Tjumlah_bus
         '
-        Me.Tjumlah_bus.Location = New System.Drawing.Point(126, 125)
+        Me.Tjumlah_bus.Location = New System.Drawing.Point(94, 123)
         Me.Tjumlah_bus.Name = "Tjumlah_bus"
         Me.Tjumlah_bus.ReadOnly = True
-        Me.Tjumlah_bus.Size = New System.Drawing.Size(129, 20)
+        Me.Tjumlah_bus.Size = New System.Drawing.Size(175, 20)
         Me.Tjumlah_bus.TabIndex = 141
         '
         'Label19
@@ -461,10 +461,10 @@ Partial Class FPemesanan
         '
         'Tharga
         '
-        Me.Tharga.Location = New System.Drawing.Point(126, 99)
+        Me.Tharga.Location = New System.Drawing.Point(94, 97)
         Me.Tharga.Name = "Tharga"
         Me.Tharga.ReadOnly = True
-        Me.Tharga.Size = New System.Drawing.Size(129, 20)
+        Me.Tharga.Size = New System.Drawing.Size(175, 20)
         Me.Tharga.TabIndex = 139
         '
         'Label20
@@ -480,10 +480,10 @@ Partial Class FPemesanan
         '
         'Tkelas
         '
-        Me.Tkelas.Location = New System.Drawing.Point(126, 73)
+        Me.Tkelas.Location = New System.Drawing.Point(94, 71)
         Me.Tkelas.Name = "Tkelas"
         Me.Tkelas.ReadOnly = True
-        Me.Tkelas.Size = New System.Drawing.Size(129, 20)
+        Me.Tkelas.Size = New System.Drawing.Size(175, 20)
         Me.Tkelas.TabIndex = 137
         '
         'Label21
@@ -499,10 +499,10 @@ Partial Class FPemesanan
         '
         'Tjurusan
         '
-        Me.Tjurusan.Location = New System.Drawing.Point(126, 47)
+        Me.Tjurusan.Location = New System.Drawing.Point(94, 45)
         Me.Tjurusan.Name = "Tjurusan"
         Me.Tjurusan.ReadOnly = True
-        Me.Tjurusan.Size = New System.Drawing.Size(129, 20)
+        Me.Tjurusan.Size = New System.Drawing.Size(175, 20)
         Me.Tjurusan.TabIndex = 135
         '
         'Label22
@@ -574,9 +574,9 @@ Partial Class FPemesanan
         '
         'Tno_bangku
         '
-        Me.Tno_bangku.Location = New System.Drawing.Point(126, 151)
+        Me.Tno_bangku.Location = New System.Drawing.Point(94, 149)
         Me.Tno_bangku.Name = "Tno_bangku"
-        Me.Tno_bangku.Size = New System.Drawing.Size(129, 20)
+        Me.Tno_bangku.Size = New System.Drawing.Size(175, 20)
         Me.Tno_bangku.TabIndex = 145
         '
         'Label26

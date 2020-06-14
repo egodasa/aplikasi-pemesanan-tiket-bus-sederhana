@@ -61,6 +61,5 @@
     End Function
 
     Private Sub Aplikasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Tusername.Text = GenerateKode("tb_mobil", "kode_mobil", "M")
     End Sub
 End Class

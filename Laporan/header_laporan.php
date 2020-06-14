@@ -3,7 +3,7 @@
 		<td style="width: 100%;">
 			<div style="text-align: left;">
 				<h2>
-					PT. MALINDO PRIMA TRANSPORT<br>
+					PO. JASA MALINDO<br>
 					KOTA PADANG
 				</h2>
 			</div>

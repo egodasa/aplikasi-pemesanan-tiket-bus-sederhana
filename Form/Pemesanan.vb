@@ -2,22 +2,29 @@
     Private data_mobil As DataTable
     Private data_tiket As DataTable
     Private Sub AmbilDataMobil()
-        data_mobil = Aplikasi.Db.JalankanDanAmbilData("SELECT *, merk & ' - ' & jenis & ' - ' & no_polisi AS keterangan FROM tb_mobil ORDER BY kode_mobil")
-        Ckode_mobil.DataSource = data_mobil
+        data_mobil = Aplikasi.Db.JalankanDanAmbilData("SELECT *, kode_mobil & ' - ' & merk & ' - ' & jenis & ' - ' & no_polisi AS keterangan FROM tb_mobil ORDER BY kode_mobil")
+        If Aplikasi.Db.ApakahError Then
+            MessageBox.Show(Aplikasi.Db.AmbilPesanError)
+            Stop
+        End If
         Ckode_mobil.ValueMember = "kode_mobil"
         Ckode_mobil.DisplayMember = "keterangan"
+        Ckode_mobil.DataSource = data_mobil
+        
     End Sub
     Private Sub AmbilDataTiket()
-        data_tiket = Aplikasi.Db.JalankanDanAmbilData("SELECT *, jurusan & ' - ' & kelas AS keterangan FROM tb_tiker ORDER BY kode_tiket")
+        data_tiket = Aplikasi.Db.JalankanDanAmbilData("SELECT *, kode_tiket & ' - ' & jurusan & ' - ' & kelas AS keterangan FROM tb_tiket ORDER BY kode_tiket")
+        If Aplikasi.Db.ApakahError Then
+            MessageBox.Show(Aplikasi.Db.AmbilPesanError)
+            Stop
+        End If
+        Ckode_tiket.ValueMember = "kode_tiket"
+        Ckode_tiket.DisplayMember = "keterangan"
         Ckode_tiket.DataSource = data_tiket
-        Ckode_mobil.ValueMember = "kode_tiket"
-        Ckode_mobil.DisplayMember = "keterangan"
+        
     End Sub
-    Private Function GenerateKodePemesanan()
-        Return 0
-    End Function
     Private Sub SetKodePemesanan()
-        Tkode_pemesanan.Text = GenerateKodePemesanan()
+        Tkode_pemesanan.Text = Aplikasi.GenerateKode("tb_pemesanan", "kode_tiket", "PJ-TKT-")
     End Sub
     Private Sub TampilDetailLogin()
         Tnama_kasir.Text = Aplikasi.nama_lengkap
@@ -63,7 +70,7 @@
     End Sub
     Private Sub SimpanPemesanan()
         If Tnm_pembeli.Text <> "" And Ttelpon.Text <> "" And Ckode_tiket.SelectedIndex >= 0 And Ckode_mobil.SelectedIndex >= 0 And Tno_bangku.Text <> "" And Tjumlah_beli.Text <> "" And Ttotal_bayar.Text <> "" And Tdibayar.Text <> "" Then
-            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "', '" & Tnm_pembeli.Text & "','" & Ckode_tiket.SelectedValue & "', '" & Ttelpon.Text & "','" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "', '" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "','" & Tjam_berangkat.Value.ToString("H:m") & "', '" & Ckode_mobil.SelectedValue & "','" & Tjumlah_beli.Text & "', '" & Tno_bangku.Text & "','" & Ttotal_bayar.Text & "', '" & Tdibayar.Text & "','" & Aplikasi.id_pengguna & "')")
+            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "', '" & Tnm_pembeli.Text & "','" & Ckode_tiket.SelectedValue & "', '" & Ttelpon.Text & "', '" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "', '" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "','" & Tjam_berangkat.Value.ToString("H:m") & "', '" & Ckode_mobil.SelectedValue & "', " & Tjumlah_beli.Text & ", '" & Tno_bangku.Text & "', " & Ttotal_bayar.Text & ", " & Tdibayar.Text & "," & Aplikasi.id_pengguna & ")")
             If Aplikasi.Db.ApakahError() Then
                 MessageBox.Show("Data pemesanan tidak dapat disimpan! Silahkan ulangi lagi.")
             Else
@@ -124,8 +131,12 @@
         DGpemesanan.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
     End Sub
     Private Sub LoadForm(sender As Object, e As EventArgs) Handles MyBase.Load
+        TampilDetailLogin()
         TampilDataPemesanan()
-        GenerateKodePemesanan()
+        SetKodePemesanan()
+        AmbilDataMobil()
+        AmbilDataTiket()
+        Bbatal.PerformClick()
     End Sub
 
     Private Sub Bsimpan_Click(sender As Object, e As EventArgs) Handles Bsimpan.Click
@@ -134,7 +145,6 @@
     End Sub
 
     Private Sub Bbatal_Click(sender As Object, e As EventArgs) Handles Bbatal.Click
-        GenerateKodePemesanan()
         ResetDataMobil()
         ResetDataPembeli()
         ResetDataTiket()
