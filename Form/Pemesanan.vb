@@ -1,6 +1,13 @@
 ﻿Public Class FPemesanan
     Private data_mobil As DataTable
     Private data_tiket As DataTable
+    Private Sub KurangiStokTiket()
+        Aplikasi.Db.JalankanSql("UPDATE tb_tiket SET jumlah_tiket = [jumlah_tiket] - 1 WHERE kode_tiket ='" & Ckode_tiket.SelectedValue & "'")
+        If Aplikasi.Db.ApakahError Then
+            MessageBox.Show(Aplikasi.Db.AmbilPesanError)
+            Stop
+        End If
+    End Sub
     Private Sub AmbilDataMobil()
         data_mobil = Aplikasi.Db.JalankanDanAmbilData("SELECT *, kode_mobil & ' - ' & merk & ' - ' & jenis & ' - ' & no_polisi AS keterangan FROM tb_mobil ORDER BY kode_mobil")
         If Aplikasi.Db.ApakahError Then
@@ -72,10 +79,12 @@
     End Sub
     Private Sub SimpanPemesanan()
         If Tnm_pembeli.Text <> "" And Ttelpon.Text <> "" And Ckode_tiket.SelectedIndex >= 0 And Ckode_mobil.SelectedIndex >= 0 And Tno_bangku.Text <> "" And Tjumlah_beli.Text <> "" And Ttotal_bayar.Text <> "" And Tdibayar.Text <> "" Then
-            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "', '" & Tnm_pembeli.Text & "','" & Ckode_tiket.SelectedValue & "', '" & Ttelpon.Text & "', '" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "', '" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "','" & Tjam_berangkat.Value.ToString("H:m") & "', '" & Ckode_mobil.SelectedValue & "', " & Tjumlah_beli.Text & ", '" & Tno_bangku.Text & "', " & Ttotal_bayar.Text & ", " & Tdibayar.Text & "," & Aplikasi.id_pengguna & ")")
+            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "', '" & Tnm_pembeli.Text & "','" & Ckode_tiket.SelectedValue & "', '" & Ttelpon.Text & "', #" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "#, #" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "#, #" & Tjam_berangkat.Value.ToString("H:m") & "#, '" & Ckode_mobil.SelectedValue & "', " & Tjumlah_beli.Text & ", '" & Tno_bangku.Text & "', " & Ttotal_bayar.Text & ", " & Tdibayar.Text & "," & Aplikasi.id_pengguna & ")")
             If Aplikasi.Db.ApakahError() Then
                 MessageBox.Show("Data pemesanan tidak dapat disimpan! Silahkan ulangi lagi.")
+                MessageBox.Show(Aplikasi.Db.AmbilPesanError)
             Else
+                KurangiStokTiket()
                 Bbatal.PerformClick()
                 MessageBox.Show("Data berhasil disimpan!")
             End If
@@ -121,14 +130,11 @@
         Tkelas.Clear()
         Tharga.Clear()
     End Sub
-    Private Sub TampilDataPemesanan()
-        Dim sql As String = "SELECT * FROM tb_pemesanan"
-        DGpemesanan.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
-    End Sub
-    Private Sub PencarianDataPemesanan(ByVal kata_kunci As String)
-        Dim sql As String = "SELECT * FROM tb_pemesanan"
-        If kata_kunci <> vbEmpty Then
-            sql += " WHERE kode_pemesanan LIKE '%" & kata_kunci & "%' OR nm_pembeli LIKE '%" & kata_kunci & "%' OR telpon LIKE '%" & kata_kunci & "%' OR  no_bangku LIKE '%" & kata_kunci & "%'"
+    Private Sub TampilDataPemesanan(Optional ByVal kata_kunci As String = "")
+        Dim sql As String = "Select [tb_pemesanan].[kode_pemesanan], [tb_pemesanan].[nm_pembeli], [tb_pemesanan].telpon, [tb_pemesanan].[tgl_transaksi], [tb_pemesanan].[tgl_berangkat], [tb_pemesanan].[jam_berangkat], [tb_tiket].[kode_tiket], [tb_tiket].jurusan, [tb_tiket].kelas, [tb_tiket].[jumlah_tiket], [tb_mobil].[kode_mobil], [tb_mobil].jenis, [tb_mobil].merk, [tb_mobil].[no_polisi]" &
+                            " From (([tb_pemesanan] Inner Join [tb_mobil] On [tb_pemesanan].[kode_mobil] = [tb_mobil].[kode_mobil]) Inner Join [tb_tiket] On [tb_tiket].[kode_tiket] = [tb_pemesanan].[kode_tiket]) Inner Join [tb_pengguna] On [tb_pemesanan].[id_pengguna] = [tb_pengguna].[id_pengguna]"
+        If kata_kunci <> "" Then
+            sql += " WHERE tb_pemesanan.kode_pemesanan LIKE '%" & kata_kunci & "%' OR tb_pemesanan.nm_pembeli LIKE '%" & kata_kunci & "%' OR tb_pemesanan.telpon LIKE '%" & kata_kunci & "%' OR tb_pemesanan.no_bangku LIKE '%" & kata_kunci & "%'"
         End If
         DGpemesanan.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
     End Sub
@@ -174,11 +180,14 @@
 
     End Sub
 
-    Private Sub EventHitungJumlahBayar(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Tjumlah_beli.KeyUp
+    Private Sub EventHitungJumlahBayar(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tjumlah_beli.TextChanged
         HitungTotalBayar()
+        If Tdibayar.Text <> "" Then
+            HitungKembalian()
+        End If
     End Sub
 
-    Private Sub EventHitungSisa(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Tdibayar.KeyDown
+    Private Sub EventKembalian(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tdibayar.TextChanged
         HitungKembalian()
     End Sub
 End Class

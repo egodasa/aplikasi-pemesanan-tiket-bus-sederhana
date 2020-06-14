@@ -424,7 +424,7 @@ Partial Class FPemesanan
         '
         'Tjumlah_beli
         '
-        Me.Tjumlah_beli.Location = New System.Drawing.Point(94, 175)
+        Me.Tjumlah_beli.Location = New System.Drawing.Point(94, 149)
         Me.Tjumlah_beli.Name = "Tjumlah_beli"
         Me.Tjumlah_beli.Size = New System.Drawing.Size(175, 20)
         Me.Tjumlah_beli.TabIndex = 143
@@ -434,7 +434,7 @@ Partial Class FPemesanan
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(9, 177)
+        Me.Label18.Location = New System.Drawing.Point(9, 151)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(76, 17)
         Me.Label18.TabIndex = 142
@@ -574,7 +574,7 @@ Partial Class FPemesanan
         '
         'Tno_bangku
         '
-        Me.Tno_bangku.Location = New System.Drawing.Point(94, 149)
+        Me.Tno_bangku.Location = New System.Drawing.Point(94, 175)
         Me.Tno_bangku.Name = "Tno_bangku"
         Me.Tno_bangku.Size = New System.Drawing.Size(175, 20)
         Me.Tno_bangku.TabIndex = 145
@@ -584,7 +584,7 @@ Partial Class FPemesanan
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(9, 149)
+        Me.Label26.Location = New System.Drawing.Point(9, 175)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(79, 17)
         Me.Label26.TabIndex = 144
