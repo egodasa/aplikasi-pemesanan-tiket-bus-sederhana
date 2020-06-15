@@ -86,18 +86,35 @@
     End Sub
 
     Private Sub Blaporan_mobil_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_mobil.Click
+        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("SELECT * FROM tb_mobil")
+        ' konversi datatable ke hash
+        Dim data As List(Of DataRow) = New List(Of DataRow)(data_tmp.Select())
+
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-mobil.html"
-        Cetak_Laporan.data.Add("nama", "madam")
+        Cetak_Laporan.data.Add("tanggal", Date.Today.ToString("dd-MM-yyyy"))
+        Cetak_Laporan.data.Add("data_mobil", Data)
         Cetak_Laporan.ShowDialog()
     End Sub
 
     Private Sub Blaporan_tiket_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_tiket.Click
+        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("SELECT * FROM tb_tiket")
+        ' konversi datatable ke hash
+        Dim data As List(Of DataRow) = New List(Of DataRow)(data_tmp.Select())
+
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-tiket.html"
+        Cetak_Laporan.data.Add("tanggal", Date.Today.ToString("dd-MM-yyyy"))
+        Cetak_Laporan.data.Add("data_tiket", data)
         Cetak_Laporan.ShowDialog()
     End Sub
 
     Private Sub Blaporan_pemesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_pemesanan.Click
+        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("SELECT * FROM tb_pemesanan")
+        ' konversi datatable ke hash
+        Dim data As List(Of DataRow) = New List(Of DataRow)(data_tmp.Select())
+
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-pemesanan.html"
+        Cetak_Laporan.data.Add("tanggal", Date.Today.ToString("dd-MM-yyyy"))
+        Cetak_Laporan.data.Add("data_pemesanan", data)
         Cetak_Laporan.ShowDialog()
     End Sub
 End Class

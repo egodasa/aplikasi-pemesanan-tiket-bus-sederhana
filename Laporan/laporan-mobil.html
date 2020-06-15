@@ -33,22 +33,22 @@
 				<th class="table-th">Warna</th>
 				<th class="table-th">Bahan Bakar</th>
 			</tr>
-            {% for dt in data.daftar_mobil -%}
+            {% for data in data_mobil -%}
 				<tr>
-					<td class="table-td">{{ dt.no }}</td>
-					<td class="table-td">{{ dt.kode_mobil }}</td>
-					<td class="table-td">{{ dt.no_polisi }}</td>
-					<td class="table-td">{{ dt.jenis }}</td>
-					<td class="table-td">{{ dt.merk }}</td>
-					<td class="table-td">{{ dt.warna }}</td>
-					<td class="table-td">{{ dt.bahan_bakar }}</td>
+					<td class="table-td">{{ data.no }}</td>
+					<td class="table-td">{{ data.kode_mobil }}</td>
+					<td class="table-td">{{ data.no_polisi }}</td>
+					<td class="table-td">{{ data.jenis }}</td>
+					<td class="table-td">{{ data.merk }}</td>
+					<td class="table-td">{{ data.warna }}</td>
+					<td class="table-td">{{ data.bahan_bakar }}</td>
 				</tr>
                 {% endfor -%}
 		</table>
 		<hr>
 
 		<div style="float: right;width: 300px;text-align: center;">
-			{{ data.tanggal }} <br>
+			{{ tanggal }} <br>
 			Pimpinan
 			<br>
 			<br>

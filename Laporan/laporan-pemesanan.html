@@ -36,7 +36,7 @@
 				<th class="table-th">No Bangku</th>
 				<th class="table-th">Total Bayar</th>
 			</tr>
-            {% for dt in data.daftar_pemesanan -%}
+            {% for dt in data_pemesanan -%}
 				<tr>
 					<td class="table-td">{{ dt.no }}</td>
 					<td class="table-td">{{ dt.kode_pemesanan }}</td>
@@ -54,7 +54,7 @@
 		<hr>
 
 		<div style="float: right;width: 300px;text-align: center;">
-			{{ data.tanggal }} <br>
+			{{ tanggal }} <br>
 			Pimpinan
 			<br>
 			<br>

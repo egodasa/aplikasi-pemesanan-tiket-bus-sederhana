@@ -1,11 +1,10 @@
 ﻿Imports DotLiquid
 Public Class Cetak_Laporan
     Public url As String
-    Public data As Hash
+    Public data As New Hash
     Public Sub AmbilDataLaporan()
-        Dim template As Template = template.Parse(url)
-        Dim result As String = template.Render(data)
-        WBcetak.DocumentText = System.IO.File.ReadAllText(url)
+        Dim template As Template = template.Parse(IO.File.ReadAllText(url))
+        WBcetak.DocumentText = template.Render(data)
     End Sub
 
     Public Sub CetakLaporan()
