@@ -4,7 +4,7 @@
     Public level As String
     Public nama_lengkap As String
     Public username As String
-    Public url_laporan As String = Application.StartupPath & "\"
+    Public url_laporan As String = Application.StartupPath & "\Laporan\"
     Public Sub TutupForm(ByVal form As Form)
         FMenu_Utama.Show()
         form.Close()

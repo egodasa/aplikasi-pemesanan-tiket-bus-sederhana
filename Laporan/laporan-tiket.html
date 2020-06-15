@@ -1,13 +1,9 @@
-﻿<?php
-	include_once "koneksi.php";
-	include_once "helper.php";
-?>
-<html>
+﻿<html>
 	<head>
 		<meta charset="UTF-8">
         <title>Laporan Data Tiket</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-		<link href="style_laporan.css" rel="css/stylesheet" />
+		<link href="style_laporan.css" rel="stylesheet" />
 	</head>
 	<body>
 		<table style="width: 100%;">
@@ -37,30 +33,22 @@
 				<th class="table-th">Jumlah Bus</th>
 				<th class="table-th">Jumlah Tiket</th>
 			</tr>
-			<?php
-				$no = 1;
-				$sql_query = mysqli_query($koneksi, "Select * From tb_tiket");
-				while($nilai = mysqli_fetch_assoc($sql_query))
-				{
-			?>
+            {% for dt in data.daftar_tiket -%}
 				<tr>
-					<td class="table-td"><?=$no?></td>
-					<td class="table-td"><?=$nilai['kode_tiket']?></td>
-					<td class="table-td"><?=$nilai['jurusan']?></td>
-					<td class="table-td"><?=$nilai['kelas']?></td>
-					<td class="table-td"><?=$nilai['harga']?></td>
-					<td class="table-td"><?=$nilai['jumlah_bus']?></td>
-					<td class="table-td"><?=$nilai['jumlah_tiket']?></td>
+					<td class="table-td">{{ dt.no }} </td>
+					<td class="table-td">{{ dt.kode_tiket }}</td>
+					<td class="table-td">{{ dt.jurusan }}</td>
+					<td class="table-td">{{ dt.kelas }}</td>
+					<td class="table-td">{{ dt.harga }}</td>
+					<td class="table-td">{{ dt.jumlah_bus }}</td>
+					<td class="table-td">{{ dt.jumlah_tiket }}</td>
 				</tr>
-			<?php
-					$no++;
-				}
-			?>
+            {% endfor -%}
 		</table>
 		<hr>
 
 		<div style="float: right;width: 300px;text-align: center;">
-			<?=tanggal_indo(date("Y-m-d"), true)?> <br>
+			{{ data.tanggal }} <br>
 			Pimpinan
 			<br>
 			<br>

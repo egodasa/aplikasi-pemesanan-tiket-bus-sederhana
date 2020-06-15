@@ -87,6 +87,7 @@
 
     Private Sub Blaporan_mobil_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_mobil.Click
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-mobil.html"
+        Cetak_Laporan.data.Add("nama", "madam")
         Cetak_Laporan.ShowDialog()
     End Sub
 

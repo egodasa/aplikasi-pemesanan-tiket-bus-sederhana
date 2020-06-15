@@ -1,13 +1,9 @@
-﻿<?php
-	include_once "koneksi.php";
-	include_once "helper.php";
-?>
-<html>
+﻿<html>
 	<head>
 		<meta charset="UTF-8">
         <title>Laporan Data Mobil</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-		<link href="style_laporan.css" rel="css/stylesheet" />
+		<link href="style_laporan.css" rel="stylesheet" />
 	</head>
 	<body>
 		<table style="width: 100%;">
@@ -23,7 +19,7 @@
 		</table>
 		<div style="text-align: center;">
 		<h3>
-		Laporan Data Mobil <br>
+		Laporan Data Mobil<br>
 		</h3>
 		</div>
 		<hr>
@@ -37,30 +33,22 @@
 				<th class="table-th">Warna</th>
 				<th class="table-th">Bahan Bakar</th>
 			</tr>
-			<?php
-				$no = 1;
-				$sql_query = mysqli_query($koneksi, "Select * From tb_mobil");
-				while($nilai = mysqli_fetch_assoc($sql_query))
-				{
-			?>
+            {% for dt in data.daftar_mobil -%}
 				<tr>
-					<td class="table-td"><?=$no?></td>
-					<td class="table-td"><?=$nilai['kode_mobil']?></td>
-					<td class="table-td"><?=$nilai['no_polisi']?></td>
-					<td class="table-td"><?=$nilai['jenis']?></td>
-					<td class="table-td"><?=$nilai['merk']?></td>
-					<td class="table-td"><?=$nilai['warna']?></td>
-					<td class="table-td"><?=$nilai['bahan_bakar']?></td>
+					<td class="table-td">{{ dt.no }}</td>
+					<td class="table-td">{{ dt.kode_mobil }}</td>
+					<td class="table-td">{{ dt.no_polisi }}</td>
+					<td class="table-td">{{ dt.jenis }}</td>
+					<td class="table-td">{{ dt.merk }}</td>
+					<td class="table-td">{{ dt.warna }}</td>
+					<td class="table-td">{{ dt.bahan_bakar }}</td>
 				</tr>
-			<?php
-					$no++;
-				}
-			?>
+                {% endfor -%}
 		</table>
 		<hr>
 
 		<div style="float: right;width: 300px;text-align: center;">
-			<?=tanggal_indo(date("Y-m-d"), true)?> <br>
+			{{ data.tanggal }} <br>
 			Pimpinan
 			<br>
 			<br>
