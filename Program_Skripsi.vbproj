@@ -250,6 +250,9 @@
     <Content Include="Laporan\style_laporan.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Laporan\tiket.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Library\DotLiquid.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

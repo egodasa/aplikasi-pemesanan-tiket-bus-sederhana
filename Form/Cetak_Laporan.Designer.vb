@@ -114,7 +114,7 @@ Partial Class Cetak_Laporan
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Cetak_Laporan"
-        Me.Text = "Cetak_Laporan"
+        Me.Text = "Cetak"
         Me.Panel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)

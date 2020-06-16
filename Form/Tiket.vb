@@ -29,6 +29,9 @@
         If kata_kunci <> "" Then
             sql += " WHERE kode_tiket LIKE '%" & kata_kunci & "%' OR jurusan LIKE '%" & kata_kunci & "%' OR kelas LIKE '%" & kata_kunci & "%'"
         End If
+        If Aplikasi.Db.ApakahError Then
+            MessageBox.Show(Aplikasi.Db.AmbilPesanError)
+        End If
         DGtiket.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
     End Sub
     Private Function CekKodeTiket()
@@ -55,7 +58,7 @@
             Tkode_tiket.Clear()
             Return
         End If
-        Aplikasi.Db.JalankanSql("INSERT INTO tb_tiket VALUES ('" & kode_tiket & "', '" & jurusan & "', " & jumlah_bus & ", '" & kelas & "', " & harga & ", " & jumlah_tiket & ")")
+        Aplikasi.Db.JalankanSql("INSERT INTO tb_tiket VALUES ('" & kode_tiket & "', '" & jurusan & "', '" & kelas & "', " & harga & ", " & jumlah_bus & ", " & jumlah_tiket & ")")
         If Aplikasi.Db.ApakahError() Then
             MessageBox.Show("Error :" & Aplikasi.Db.AmbilPesanError())
         Else

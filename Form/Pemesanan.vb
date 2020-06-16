@@ -93,7 +93,8 @@
         End If
     End Sub
     Private Sub CetakPemesanan()
-
+        Cetak_Laporan.url = Aplikasi.url_laporan & "tiket.html"
+        Cetak_Laporan.ShowDialog()
     End Sub
     Private Sub HapusPemesanan()
         Dim data_terpilih As String = DGpemesanan.CurrentRow.Cells("kode_pemesanan").Value.ToString()
@@ -189,5 +190,9 @@
 
     Private Sub EventKembalian(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Tdibayar.TextChanged
         HitungKembalian()
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        CetakPemesanan()
     End Sub
 End Class

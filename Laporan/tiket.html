@@ -1,0 +1,85 @@
+﻿<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>Tiket Penumpang</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<style>
+	        body {
+				padding: 20px;
+				font-family: Arial;
+			}
+			.table {
+				border: 1px solid black;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			.table-th {
+			    border: 1px solid black;
+			    border-collapse: collapse;
+			    padding: 5px 7px;
+			}
+			.table-td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 5px 7px;
+				text-align: left;
+			}
+			.kolom-informasi {
+				width: 100px;
+			}
+			.kolom-titik {
+				width: 2px;
+			}
+        </style>
+	</head>
+	<body>
+		<table class="table">
+			<tr>
+				<td colspan="6" style="text-align: center;font-weight: bold; font-size: 18pt; background-color: lightblue;">
+					PO. JASA MALINDO
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" style="text-align: center;font-weight: bold; font-size: 15pt; background-color: lightblue;">
+					TIKET PENUMPANG
+				</td>
+			</tr>
+			<tr>
+				<td class="table-td kolom-informasi">Nama</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ nm_pembeli }}</td>
+
+				<td class="table-td kolom-informasi">Tempat Duduk</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ no_bangku }}</td>
+			</tr>
+			<tr>
+				<td class="table-td kolom-informasi">Telpon</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ telpon }}</td>
+
+				<td class="table-td kolom-informasi">Tanggal</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ tgl_berangkat }}</td>
+			</tr>
+			<tr>
+				<td class="table-td kolom-informasi">Jurusan</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ jurusan }}</td>
+
+				<td class="table-td kolom-informasi">Jam Berangkat</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ jam_berangkat }}</td>
+			</tr>
+			<tr>
+				<td class="table-td kolom-informasi">No Polisi</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ no_polisi }}</td>
+
+				<td class="table-td kolom-informasi">Total Bayar</td>
+				<td class="table-td kolom-titik">:</td>
+				<td class="table-td">{{ total_bayar }}</td>
+			</tr>
+		</table>
+	</body>
+</html>
