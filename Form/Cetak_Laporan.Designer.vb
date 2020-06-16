@@ -27,8 +27,8 @@ Partial Class Cetak_Laporan
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.WBcetak = New System.Windows.Forms.WebBrowser()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +42,7 @@ Partial Class Cetak_Laporan
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(890, 45)
+        Me.Panel1.Size = New System.Drawing.Size(1118, 45)
         Me.Panel1.TabIndex = 0
         '
         'Button3
@@ -51,7 +51,7 @@ Partial Class Cetak_Laporan
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(802, 12)
+        Me.Button3.Location = New System.Drawing.Point(210, 12)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 2
@@ -84,6 +84,17 @@ Partial Class Cetak_Laporan
         Me.Button1.Text = "Muat Ulang"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'WBcetak
+        '
+        Me.WBcetak.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.WBcetak.Location = New System.Drawing.Point(3, 3)
+        Me.WBcetak.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WBcetak.Name = "WBcetak"
+        Me.WBcetak.Size = New System.Drawing.Size(1115, 476)
+        Me.WBcetak.TabIndex = 0
+        Me.WBcetak.Url = New System.Uri("http://xx", System.UriKind.Absolute)
+        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AutoSize = True
@@ -91,23 +102,14 @@ Partial Class Cetak_Laporan
         Me.FlowLayoutPanel1.Controls.Add(Me.WBcetak)
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 41)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(893, 423)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1121, 482)
         Me.FlowLayoutPanel1.TabIndex = 1
-        '
-        'WBcetak
-        '
-        Me.WBcetak.Location = New System.Drawing.Point(3, 3)
-        Me.WBcetak.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WBcetak.Name = "WBcetak"
-        Me.WBcetak.Size = New System.Drawing.Size(887, 417)
-        Me.WBcetak.TabIndex = 0
-        Me.WBcetak.Url = New System.Uri("http://xx", System.UriKind.Absolute)
         '
         'Cetak_Laporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(889, 464)
+        Me.ClientSize = New System.Drawing.Size(1118, 516)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -122,8 +124,8 @@ Partial Class Cetak_Laporan
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents WBcetak As WebBrowser
+    Friend WithEvents WBcetak As System.Windows.Forms.WebBrowser
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
 End Class

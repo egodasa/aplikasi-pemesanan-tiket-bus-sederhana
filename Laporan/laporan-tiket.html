@@ -3,13 +3,34 @@
 		<meta charset="UTF-8">
         <title>Laporan Data Tiket</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-		<link href="style_laporan.css" rel="stylesheet" />
+		<style>
+        body {
+	padding: 20px;
+}
+.table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+}
+.table-th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: SteelBlue;
+    padding: 5px 7px;
+    color: white;
+}
+.table-td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 5px 7px;
+}
+        </style>
 	</head>
 	<body>
 		<table style="width: 100%;">
 			<tr>
 				<td style="width: 100%;">
-					<div style="text-align: left;">
+					<div style="text-align: center;">
 						<h2>
 							PO. JASA MALINDO
 						</h2>
@@ -33,6 +54,7 @@
 				<th class="table-th">Jumlah Bus</th>
 				<th class="table-th">Jumlah Tiket</th>
 			</tr>
+            {{ data_tiket }}
             {% for dt in data_tiket -%}
 				<tr>
 					<td class="table-td">{{ dt.no }} </td>

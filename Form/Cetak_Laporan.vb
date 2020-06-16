@@ -2,6 +2,13 @@
 Public Class Cetak_Laporan
     Public url As String
     Public data As New Hash
+    Public Sub SetData(ByVal kolom As String, ByVal data As Object)
+        If Me.data.ContainsKey(kolom) Then
+            Me.data.Item(kolom) = data
+        Else
+            Me.data.Add(kolom, data)
+        End If
+    End Sub
     Public Sub AmbilDataLaporan()
         Dim template As Template = template.Parse(IO.File.ReadAllText(url))
         WBcetak.DocumentText = template.Render(data)
