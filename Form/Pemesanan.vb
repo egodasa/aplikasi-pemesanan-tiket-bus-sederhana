@@ -79,7 +79,7 @@
     End Sub
     Private Sub SimpanPemesanan()
         If Tnm_pembeli.Text <> "" And Ttelpon.Text <> "" And Ckode_tiket.SelectedIndex >= 0 And Ckode_mobil.SelectedIndex >= 0 And Tno_bangku.Text <> "" And Tjumlah_beli.Text <> "" And Ttotal_bayar.Text <> "" And Tdibayar.Text <> "" Then
-            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "', '" & Tnm_pembeli.Text & "','" & Ckode_tiket.SelectedValue & "', '" & Ttelpon.Text & "', #" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "#, #" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "#, #" & Tjam_berangkat.Value.ToString("H:m") & "#, '" & Ckode_mobil.SelectedValue & "', " & Tjumlah_beli.Text & ", '" & Tno_bangku.Text & "', " & Ttotal_bayar.Text & ", " & Tdibayar.Text & "," & Aplikasi.id_pengguna & ")")
+            Aplikasi.Db.JalankanSql("INSERT INTO tb_pemesanan VALUES ('" & Tkode_pemesanan.Text & "','" & Ckode_tiket.SelectedValue & "','" & Ttelpon.Text & "', " & Aplikasi.id_pengguna & ", '" & Tnm_pembeli.Text & "', #" & Ttgl_transaksi.Value.ToString("yyyy-MM-dd") & "#, #" & Ttgl_berangkat.Value.ToString("yyyy-MM-dd") & "#, #" & Tjam_berangkat.Value.ToString("H:m") & "#, '" & Ckode_mobil.SelectedValue & "', " & Tjumlah_beli.Text & ", '" & Tno_bangku.Text & "', " & Ttotal_bayar.Text & ", " & Tdibayar.Text & ")")
             If Aplikasi.Db.ApakahError() Then
                 MessageBox.Show("Data pemesanan tidak dapat disimpan! Silahkan ulangi lagi.")
                 MessageBox.Show(Aplikasi.Db.AmbilPesanError)
@@ -92,7 +92,20 @@
             MessageBox.Show("Silahkan isi semua data pemesanan!")
         End If
     End Sub
-    Private Sub CetakPemesanan()
+    Private Sub CetakPemesanan(ByVal kode_tiket As String)
+        Dim sql As String = "Select [tb_pemesanan].[kode_pemesanan], [tb_pemesanan].[no_bangku], [tb_pemesanan].[nm_pembeli], [tb_pemesanan].telpon, [tb_pemesanan].[tgl_transaksi], [tb_pemesanan].[tgl_berangkat], [tb_pemesanan].[jam_berangkat], [tb_tiket].[kode_tiket], [tb_tiket].jurusan, [tb_tiket].kelas, [tb_tiket].[jumlah_tiket], [tb_mobil].[kode_mobil], [tb_mobil].jenis, [tb_mobil].merk, [tb_mobil].[no_polisi]" &
+                            " From (([tb_pemesanan] Inner Join [tb_mobil] On [tb_pemesanan].[kode_mobil] = [tb_mobil].[kode_mobil]) Inner Join [tb_tiket] On [tb_tiket].[kode_tiket] = [tb_pemesanan].[kode_tiket]) Inner Join [tb_pengguna] On [tb_pemesanan].[id_pengguna] = [tb_pengguna].[id_pengguna] WHERE [tb_pemesanan].[kode_pemesanan] = '" & kode_tiket & "'"
+        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData(sql)
+        Dim data_tiket As DataRow = data_tmp.Rows(0)
+        Cetak_Laporan.SetData("kode_pemesanan", data_tiket.Item("kode_pemesanan"))
+        Cetak_Laporan.SetData("nm_pembeli", data_tiket.Item("nm_pembeli"))
+        Cetak_Laporan.SetData("no_bangku", data_tiket.Item("no_bangku"))
+        Cetak_Laporan.SetData("telpon", data_tiket.Item("telpon"))
+        Cetak_Laporan.SetData("tgl_berangkat", data_tiket.Item("tgl_berangkat").ToString("dd-MM-yyyy"))
+        Cetak_Laporan.SetData("jurusan", data_tiket.Item("jurusan"))
+        Cetak_Laporan.SetData("jam_berangkat", data_tiket.Item("jam_berangkat").ToString("H:m"))
+        Cetak_Laporan.SetData("no_polisi", data_tiket.Item("no_polisi"))
+        Cetak_Laporan.SetData("total_bayar", data_tiket.Item("total_bayar"))
         Cetak_Laporan.url = Aplikasi.url_laporan & "tiket.html"
         Cetak_Laporan.ShowDialog()
     End Sub
@@ -148,9 +161,10 @@
         Bbatal.PerformClick()
     End Sub
 
-    Private Sub Bsimpan_Click(sender As Object, e As EventArgs) Handles Bsimpan.Click
+    Private Sub Bsimpan_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bsimpan.Click
+        Dim kode_tiket As String = Tkode_pemesanan.Text
         SimpanPemesanan()
-        CetakPemesanan()
+        CetakPemesanan(kode_tiket)
     End Sub
 
     Private Sub Bbatal_Click(sender As Object, e As EventArgs) Handles Bbatal.Click
@@ -192,7 +206,7 @@
         HitungKembalian()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        CetakPemesanan()
+    Private Sub EventCetakTiket(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        CetakPemesanan(DGpemesanan.CurrentRow.Cells("kode_pemesanan").Value)
     End Sub
 End Class
