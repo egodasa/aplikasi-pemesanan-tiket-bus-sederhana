@@ -1,0 +1,43 @@
+PENJELASAN SINGKAT TENTANG PROGRAM :
+
+- Aplikasi ini bertujuan untuk mempermudah proses transaksi pemesanan pembelian 
+tiket pada PO. JASA MALINDO.
+
+- Aplikasi ini akan digunakan oleh 3 jenis orang yaitu :
+1. Admin.
+* Admin bisa menggunakan semua menu yang ada diprogram.
+* Admin bisa menambahkan kasir atau pimpinan kedalam program 
+agar kasir dan pimpinan bisa login ke aplikasi melalui menu "Data Pengguna".
+* Admin harus memasukan data mobil dan data tiket agar nanti data tersebut 
+bisa digunakan oleh KASIR saat pemesanan dilakukan. Karena saat pemesanan, 
+KASIR harus memilih tiket yang akan dipesan serta mobil yang akan digunakan.
+
+2. Kasir.
+* Kasir hanya bisa mengakses menu "Data Pemesanan" tiket. 
+* Menu pemesanan tiket berguna untuk mengentrikan data pemesanan yang dilakukan 
+oleh pembeli.
+* Kasir akan mengentrikan data pemesanan dan dapat melakukan
+cetak tiket langsung setelah data pemesanan dientrikan.
+
+3. Pimpinan.
+* Pimpinan hanya melihat laporan data mobil, tiket dan pemesanan pada aplikasi.
+* Pimpinan tidak bisa mengakses menu lain. Hanya bisa melihat menu laporan saja.
+
+
+- Ringkasan alur program :
+* Admin.
+1. Admin login dengan username "admin" dan password "admin".
+2. Admin mengentrikan data mobil dan tiket.
+3. Admin menambahkan data kasir atau pimpinan agar mereka bisa login nanti.
+4. Admin dapat mengakses menu laporan dan menu pemesanan juga.
+
+* Kasir.
+1. Kasir login dengan username "kasir" dan password "kasir".
+2. Kasir membuka menu "data pemesanan".
+3. Kasir meentrikan data pembeli, memilih tiket dan menentukan mobil,
+serta meinputkan jumlah bayar.
+4. Admin menyimpan data pemesanan dan mencetak tiket.
+
+* Pimpinan.
+1. Pimpinan login dengan username "pimpinan" dan password "pimpinan".
+2. Pimpinan membuka menu laporan mobil, tiket dan pemesanan.
