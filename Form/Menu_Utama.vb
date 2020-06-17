@@ -131,7 +131,7 @@ Public Class FMenu_Utama
     End Sub
 
     Private Sub Blaporan_pemesanan_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_pemesanan.Click
-        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("Select [tb_pemesanan].[kode_pemesanan], [tb_pemesanan].[nm_pembeli], [tb_pemesanan].telpon, [tb_pemesanan].[tgl_transaksi], [tb_pemesanan].[tgl_berangkat], [tb_pemesanan].[jam_berangkat], [tb_pemesanan].[jumlah_beli], [tb_pemesanan].[no_bangku], [tb_pemesanan].[total_bayar] From ([tb_mobil] Inner Join [tb_pemesanan] On [tb_pemesanan].[kode_mobil] = [tb_mobil].[kode_mobil]) Inner Join [tb_tiket] On [tb_pemesanan].[kode_tiket] = [tb_tiket].[kode_tiket]")
+        Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("Select [tb_pemesanan].[kode_pemesanan], [tb_tiket].[jurusan], [tb_pemesanan].[nm_pembeli], [tb_pemesanan].telpon, [tb_pemesanan].[tgl_transaksi], [tb_pemesanan].[tgl_berangkat], [tb_pemesanan].[jam_berangkat], [tb_pemesanan].[jumlah_beli], [tb_pemesanan].[no_bangku], [tb_pemesanan].[total_bayar] From ([tb_mobil] Inner Join [tb_pemesanan] On [tb_pemesanan].[kode_mobil] = [tb_mobil].[kode_mobil]) Inner Join [tb_tiket] On [tb_pemesanan].[kode_tiket] = [tb_tiket].[kode_tiket]")
         Dim html_data As New StringBuilder
         Dim no As Integer = 1
         For Each row As DataRow In data_tmp.Rows
@@ -141,8 +141,8 @@ Public Class FMenu_Utama
             html_data.Append("<td class='table-td'>" & row("nm_pembeli") & "</td>")
             html_data.Append("<td class='table-td'>" & row("telpon") & "</td>")
             html_data.Append("<td class='table-td'>" & row("jurusan") & "</td>")
-            html_data.Append("<td class='table-td'>" & row("tgl_transaksi").ToString("dd-MM-yyyy") & "</td>")
-            html_data.Append("<td class='table-td'>" & row("tgl_berangkat").ToString("dd-MM-yyyy") & " " & row("jam_berangkat").ToString("H:m") & "</td>")
+            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("tgl_transaksi")).ToString("dd-MM-yyyy") & "</td>")
+            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("tgl_berangkat")).ToString("dd-MM-yyyy") & " " & Convert.ToDateTime(row("jam_berangkat")).ToString("H:m") & "</td>")
             html_data.Append("<td class='table-td'>" & row("jumlah_beli") & "</td>")
             html_data.Append("<td class='table-td'>" & row("no_bangku") & "</td>")
             html_data.Append("<td class='table-td'>" & row("total_bayar") & "</td>")
