@@ -110,6 +110,7 @@ Public Class FMenu_Utama
 
     Private Sub Blaporan_tiket_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blaporan_tiket.Click
         Dim data_tmp As DataTable = Aplikasi.Db.JalankanDanAmbilData("SELECT * FROM tb_tiket")
+
         Dim html_data As New StringBuilder
         Dim no As Integer = 1
         For Each row As DataRow In data_tmp.Rows
@@ -126,7 +127,7 @@ Public Class FMenu_Utama
         Next row
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-tiket.html"
         Cetak_Laporan.SetData("tanggal", Date.Today.ToString("dd-MM-yyyy"))
-        Cetak_Laporan.SetData("data_mobil", html_data.ToString)
+        Cetak_Laporan.SetData("data_tiket", html_data.ToString)
         Cetak_Laporan.ShowDialog()
     End Sub
 
@@ -141,8 +142,8 @@ Public Class FMenu_Utama
             html_data.Append("<td class='table-td'>" & row("nm_pembeli") & "</td>")
             html_data.Append("<td class='table-td'>" & row("telpon") & "</td>")
             html_data.Append("<td class='table-td'>" & row("jurusan") & "</td>")
-            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("tgl_transaksi")).ToString("dd-MM-yyyy") & "</td>")
-            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("tgl_berangkat")).ToString("dd-MM-yyyy") & " " & Convert.ToDateTime(row("jam_berangkat")).ToString("H:m") & "</td>")
+            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("tgl_berangkat")).ToString("dd-MM-yyyy") & "</td>")
+            html_data.Append("<td class='table-td'>" & Convert.ToDateTime(row("jam_berangkat")).ToString("H:m") & "</td>")
             html_data.Append("<td class='table-td'>" & row("jumlah_beli") & "</td>")
             html_data.Append("<td class='table-td'>" & row("no_bangku") & "</td>")
             html_data.Append("<td class='table-td'>" & row("total_bayar") & "</td>")
@@ -151,7 +152,7 @@ Public Class FMenu_Utama
         Next row
         Cetak_Laporan.url = Aplikasi.url_laporan & "laporan-pemesanan.html"
         Cetak_Laporan.SetData("tanggal", Date.Today.ToString("dd-MM-yyyy"))
-        Cetak_Laporan.SetData("data_mobil", html_data.ToString)
+        Cetak_Laporan.SetData("data_pemesanan", html_data.ToString)
         Cetak_Laporan.ShowDialog()
     End Sub
 End Class

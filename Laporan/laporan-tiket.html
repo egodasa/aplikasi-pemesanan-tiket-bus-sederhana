@@ -55,17 +55,6 @@
 				<th class="table-th">Jumlah Tiket</th>
 			</tr>
             {{ data_tiket }}
-            {% for dt in data_tiket -%}
-				<tr>
-					<td class="table-td">{{ dt.no }} </td>
-					<td class="table-td">{{ dt.kode_tiket }}</td>
-					<td class="table-td">{{ dt.jurusan }}</td>
-					<td class="table-td">{{ dt.kelas }}</td>
-					<td class="table-td">{{ dt.harga }}</td>
-					<td class="table-td">{{ dt.jumlah_bus }}</td>
-					<td class="table-td">{{ dt.jumlah_tiket }}</td>
-				</tr>
-            {% endfor -%}
 		</table>
 		<hr>
 
