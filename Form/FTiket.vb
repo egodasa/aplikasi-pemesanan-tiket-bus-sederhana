@@ -13,7 +13,7 @@
         harga = Tharga.Text
         jumlah_tiket = Tjumlah_tiket.Text
     End Sub
-    Private Sub ResetForm(sender As Object, e As EventArgs) Handles Bbatal.Click
+    Private Sub ResetForm(ByVal sender As Object, ByVal e As EventArgs) Handles Bbatal.Click
         Tkode_tiket.Text = Aplikasi.GenerateKode("tb_tiket", "kode_tiket", "TKT")
         Tjurusan.Clear()
         Tjumlah_tiket.Clear()
@@ -38,20 +38,10 @@
         Dim data As DataTable = Aplikasi.Db.JalankanDanAmbilData("SELECT * FROM tb_tiket WHERE kode_tiket = '" & kode_tiket & "'")
         If data.Rows.Count > 0 Then
             Return False
-        Else Return True
+        Else : Return True
         End If
     End Function
-    Private Sub AmbilData(sender As Object, e As DataGridViewCellEventArgs)
-        Dim data_terpilih As DataGridViewRow = DGtiket.CurrentRow
-        Tkode_tiket.Text = data_terpilih.Cells("kode_tiket").Value
-        Tjurusan.Text = data_terpilih.Cells("jurusan").Value
-        Tjumlah_bus.Text = data_terpilih.Cells("jumlah_bus").Value
-        Tkelas.Text = data_terpilih.Cells("kelas").Value
-        Tharga.Text = data_terpilih.Cells("harga").Value
-        Tjumlah_tiket.Text = data_terpilih.Cells("jumlah_tiket").Value
-        Tkode_tiket.ReadOnly = True
-    End Sub
-    Private Sub ProsesTambahData(sender As Object, e As EventArgs) Handles Bsimpan.Click
+    Private Sub ProsesTambahData(ByVal sender As Object, ByVal e As EventArgs) Handles Bsimpan.Click
         Me.AturData()
         If CekKodeTiket() = False Then
             MessageBox.Show("Kode tiket sudah ada! Silahkan pilih kode tiket lain.")
@@ -67,7 +57,7 @@
             TampilkanData()
         End If
     End Sub
-    Private Sub ProsesEditData(sender As Object, e As EventArgs) Handles Bedit.Click
+    Private Sub ProsesEditData(ByVal sender As Object, ByVal e As EventArgs) Handles Bedit.Click
         Me.AturData()
         Aplikasi.Db.JalankanSql("UPDATE tb_tiket SET jurusan = '" & jurusan & "', jumlah_bus = " & jumlah_bus & ",kelas = '" & kelas & "', harga = " & harga & ",jumlah_tiket = " & jumlah_tiket & " WHERE kode_tiket = '" & kode_tiket & "'")
         If Aplikasi.Db.ApakahError() Then
@@ -78,7 +68,7 @@
             TampilkanData()
         End If
     End Sub
-    Private Sub ProsesHapusData(sender As Object, e As EventArgs) Handles Bhapus.Click
+    Private Sub ProsesHapusData(ByVal sender As Object, ByVal e As EventArgs) Handles Bhapus.Click
         Dim kode_tiket = DGtiket.CurrentRow.Cells("kode_tiket").Value
         Aplikasi.Db.JalankanSql("DELETE FROM tb_tiket WHERE kode_tiket = '" & kode_tiket & "'")
         If Aplikasi.Db.ApakahError() Then
@@ -88,15 +78,26 @@
             TampilkanData()
         End If
     End Sub
-    Private Sub Tutup(sender As Object, e As EventArgs) Handles Btutup.Click
+    Private Sub Tutup(ByVal sender As Object, ByVal e As EventArgs) Handles Btutup.Click
         Aplikasi.TutupForm(Me)
     End Sub
-    Private Sub LoadForm(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub LoadForm(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Bbatal.PerformClick()
         TampilkanData()
     End Sub
 
-    Private Sub EventPencarian(sender As Object, e As KeyEventArgs) Handles Tcari.KeyUp
+    Private Sub EventPencarian(ByVal sender As Object, ByVal e As KeyEventArgs) Handles Tcari.KeyUp
         TampilkanData(Tcari.Text)
+    End Sub
+
+    Private Sub EventAmbilDetailData(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGtiket.CellContentDoubleClick
+        Dim data_terpilih As DataGridViewRow = DGtiket.CurrentRow
+        Tkode_tiket.Text = data_terpilih.Cells("kode_tiket").Value
+        Tjurusan.Text = data_terpilih.Cells("jurusan").Value
+        Tjumlah_bus.Text = data_terpilih.Cells("jumlah_bus").Value
+        Tkelas.Text = data_terpilih.Cells("kelas").Value
+        Tharga.Text = data_terpilih.Cells("harga").Value
+        Tjumlah_tiket.Text = data_terpilih.Cells("jumlah_tiket").Value
+        Tkode_tiket.ReadOnly = True
     End Sub
 End Class
