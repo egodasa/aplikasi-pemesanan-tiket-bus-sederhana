@@ -1,0 +1,10 @@
+1. SETUP.zip
+File ini berisi file setup.exe yang artinya program kita bisa diinstall pada komputer seperti menginstall program pada umumnya.
+Program dapat diakses lewat menu windows dengan nama "tugas akhir". File ini dibuat lewat visual studio pada menu publish.
+
+2. DEBUG.zip
+File ini berisi file program jadi tinggal pakai tanpa perlu diinstall ke komputer alias portable.
+File ini sumbernya dari folder bin/debug saat kita menjalankan program lewat visual studio.
+
+3. SOURCE_CODE.zip
+Tidak perlu dijelaskan lagi...
