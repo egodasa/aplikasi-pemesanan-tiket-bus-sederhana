@@ -30,8 +30,9 @@
         Ckode_tiket.DataSource = data_tiket
     End Sub
     Private Sub SetKodePemesanan()
-        Tkode_pemesanan.Text = Aplikasi.GenerateKode("tb_pemesanan", "kode_tiket", "PJ-TKT-")
+        Tkode_pemesanan.Text = Aplikasi.GenerateKode("tb_pemesanan", "kode_pemesanan", "PJ-TKT-", 6)
     End Sub
+
     Private Sub TampilDetailLogin()
         Tnama_kasir.Text = Aplikasi.nama_lengkap
     End Sub
@@ -84,6 +85,7 @@
                 MessageBox.Show("Data pemesanan tidak dapat disimpan! Silahkan ulangi lagi.")
                 MessageBox.Show(Aplikasi.Db.AmbilPesanError)
             Else
+                CetakPemesanan(Tkode_pemesanan.Text)
                 KurangiStokTiket()
                 Bbatal.PerformClick()
                 MessageBox.Show("Data berhasil disimpan!")
@@ -152,6 +154,7 @@
         End If
         DGpemesanan.DataSource = Aplikasi.Db.JalankanDanAmbilData(sql)
     End Sub
+
     Private Sub LoadForm(sender As Object, e As EventArgs) Handles MyBase.Load
         TampilDetailLogin()
         TampilDataPemesanan()
@@ -164,10 +167,8 @@
     Private Sub Bsimpan_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bsimpan.Click
         Dim kode_tiket As String = Tkode_pemesanan.Text
         SimpanPemesanan()
-        Bbatal.PerformClick()
         TampilDataPemesanan()
-        CetakPemesanan(kode_tiket)
-
+        Bbatal.PerformClick()
     End Sub
 
     Private Sub Bbatal_Click(sender As Object, e As EventArgs) Handles Bbatal.Click
@@ -175,6 +176,7 @@
         ResetDataPembeli()
         ResetDataTiket()
         ResetPembayaran()
+        SetKodePemesanan()
     End Sub
 
     Private Sub Btutup_Click(sender As Object, e As EventArgs) Handles Btutup.Click

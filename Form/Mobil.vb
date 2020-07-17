@@ -14,7 +14,7 @@
         bahan_bakar = Tbahan_bakar.Text
     End Sub
     Private Sub ResetForm(sender As Object, e As EventArgs) Handles Bbatal.Click
-        Tkode_mobil.Text = Aplikasi.GenerateKode("tb_mobil", "kode_mobil", "MB")
+        Tkode_mobil.Text = Aplikasi.GenerateKode("tb_mobil", "kode_mobil", "MB", 4)
         Tno_polisi.Clear()
         Tbahan_bakar.Clear()
         Tjenis.Clear()

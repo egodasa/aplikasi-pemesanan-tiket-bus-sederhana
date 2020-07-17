@@ -42,22 +42,23 @@
         ResetLogin()
     End Sub
 
-    Public Function GenerateKode(ByVal tabel As String, ByVal kolom As String, ByVal prefix As String)
+    Public Function GenerateKode(ByVal tabel As String, ByVal kolom As String, ByVal prefix As String, Optional ByVal jumlah_kode As Integer = 6)
         Dim no_nota As String
-        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT TOP 1 " & kolom & " AS kode FROM " & tabel & " ORDER BY " & kolom & " DESC")
+        Dim nomor As DataTable = Db.JalankanDanAmbilData("SELECT LAST([" & kolom & "]) AS kode FROM [" & tabel & "]")
         If Db.ApakahError Then
             MessageBox.Show(Db.AmbilPesanError)
             Return ""
         Else
+
+            'MessageBox.Show(Convert.ToInt32(nomor.Rows(0).Item("kode").ToString().Substring(jumlah_kode)) + 1)
             If nomor.Rows.Count = 0 Then
-                no_nota = prefix & "000001"
+                no_nota = prefix & "1".ToString().PadLeft(jumlah_kode, "0")
             Else
-                Dim no_nota_tmp As Integer = Val(nomor.Rows(0).Item("kode").ToString().Substring(6)) + 1
-                no_nota = prefix & no_nota_tmp.ToString.PadLeft(6, "0")
+                Dim no_nota_tmp As Integer = Convert.ToInt32(nomor.Rows(0).Item("kode").ToString().Substring(Math.Max(0, nomor.Rows(0).Item("kode").ToString().Length - jumlah_kode))) + 1
+                no_nota = prefix & no_nota_tmp.ToString.PadLeft(jumlah_kode, "0")
             End If
             Return no_nota
         End If
-
     End Function
 
     Private Sub Aplikasi_Load(sender As Object, e As EventArgs) Handles MyBase.Load

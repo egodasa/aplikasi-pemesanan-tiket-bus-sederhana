@@ -273,7 +273,6 @@ Partial Class FPemesanan
         '
         Me.Tkode_pemesanan.Location = New System.Drawing.Point(126, 66)
         Me.Tkode_pemesanan.Name = "Tkode_pemesanan"
-        Me.Tkode_pemesanan.ReadOnly = True
         Me.Tkode_pemesanan.Size = New System.Drawing.Size(129, 20)
         Me.Tkode_pemesanan.TabIndex = 96
         '
